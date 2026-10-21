@@ -172,13 +172,12 @@ export function About() {
       {/* ── 5. Validation ── */}
       <h2>{tx({ vi: '5. Kiểm chứng, không chỉ minh hoạ', en: '5. Validated, not just illustrated' })}</h2>
       <p>
-        {tx({ vi: 'Toàn bộ vật lý nằm trong lõi ', en: 'All physics lives in the core ' })}<code>@usac/sim-core</code>
-        {tx({ vi: ' - các hàm thuần, số thực 64 bit, tách biệt khỏi giao diện. ', en: ' - pure functions in 64-bit floating point, separate from the interface. ' })}
+        {tx({ vi: 'Toàn bộ phép tính vật lý được tổ chức trong lõi tính toán ', en: 'All physics computations are organised in the computational core ' })}<code>@usac/sim-core</code>
+        {tx({ vi: ', tách biệt với giao diện và sử dụng số thực 64 bit. Hệ thống được đánh giá qua ', en: ', separate from the interface and using 64-bit floating point. The system is assessed by ' })}
         <strong>{PHYSICS_TESTS}</strong>
-        {tx({ vi: ' phép kiểm thử tự động đối chiếu kết quả với nghiệm giải tích, định luật bảo toàn và dữ liệu tham chiếu; ', en: ' automated tests compare results with analytic solutions, conservation laws and reference data; ' })}
+        {tx({ vi: ' phép kiểm thử tự động, đối chiếu kết quả với nghiệm giải tích, các định luật bảo toàn và dữ liệu tham chiếu. Bên cạnh đó, ', en: ' automated tests that compare results with analytic solutions, conservation laws and reference data. In addition, ' })}
         <strong>{VALIDATION_REPORTS}</strong>
-        {tx({ vi: ' báo cáo kiểm chứng tái lập được bằng lệnh ', en: ' validation reports can be regenerated with ' })}<code>npm run validate</code>
-        {tx({ vi: ', và các con số trong Model Card được trích nguyên từ những báo cáo đó. Một số kết quả tiêu biểu:', en: ', and the figures in each Model Card are quoted directly from those reports. Selected results:' })}
+        {tx({ vi: ' báo cáo kiểm chứng ghi nhận kết quả đánh giá của các mô hình; những số liệu được trình bày trong Model Card đều lấy trực tiếp từ các báo cáo này. Một số kết quả tiêu biểu:', en: ' validation reports record how each model performs; the figures shown in the Model Cards are taken directly from these reports. Selected results:' })}
       </p>
       <div className="table-scroll">
         <table>
