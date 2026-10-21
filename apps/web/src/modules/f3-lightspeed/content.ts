@@ -1,4 +1,5 @@
 import type { Lesson, ModelCard } from '../types';
+import { refF } from '../visibility';
 
 export const lesson: Lesson = {
   objectives: {
@@ -42,8 +43,8 @@ export const lesson: Lesson = {
     {
       title: { vi: '3. Nhìn xa là nhìn về quá khứ', en: '3. Looking far is looking back' },
       body: {
-        vi: 'Ánh sáng từ Proxima Centauri (cách 4,25 năm ánh sáng) mà ta thấy tối nay đã rời ngôi sao hơn bốn năm trước. Ánh sáng từ tâm Ngân Hà xuất phát khoảng 26 700 năm trước; từ thiên hà Andromeda (khoảng 2,56 triệu năm ánh sáng), từ trước khi những công cụ đá đầu tiên của tổ tiên loài người được chế tác. Ở những khoảng cách lớn hơn, sự giãn nở của vũ trụ phải được tính tới; mô-đun F4 tiếp tục hành trình tới ánh sáng cổ nhất mà ta quan sát được.',
-        en: 'Light from Proxima Centauri (4.25 light-years away) seen tonight left the star more than four years ago. Light from the Galactic Centre set out about 26,700 years ago; from the Andromeda Galaxy (about 2.56 million light-years), before the first stone tools of human ancestors were made. At greater distances cosmic expansion must be taken into account; module F4 continues the journey to the oldest light we can observe.',
+        vi: `Ánh sáng từ Proxima Centauri (cách 4,25 năm ánh sáng) mà ta thấy tối nay đã rời ngôi sao hơn bốn năm trước. Ánh sáng từ tâm Ngân Hà xuất phát khoảng 26 700 năm trước; từ thiên hà Andromeda (khoảng 2,56 triệu năm ánh sáng), từ trước khi những công cụ đá đầu tiên của tổ tiên loài người được chế tác. Ở những khoảng cách lớn hơn, sự giãn nở của vũ trụ phải được tính tới${refF('; mô-đun F4 tiếp tục hành trình tới ánh sáng cổ nhất mà ta quan sát được')}.`,
+        en: `Light from Proxima Centauri (4.25 light-years away) seen tonight left the star more than four years ago. Light from the Galactic Centre set out about 26,700 years ago; from the Andromeda Galaxy (about 2.56 million light-years), before the first stone tools of human ancestors were made. At greater distances cosmic expansion must be taken into account${refF('; module F4 continues the journey to the oldest light we can observe')}.`,
       },
     },
   ],

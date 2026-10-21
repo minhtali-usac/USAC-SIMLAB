@@ -16,6 +16,7 @@ import { clear, label, disk, withAlpha } from '../../lib/canvas';
 import { drawContour } from '../../lib/contour';
 import { useLevelAtLeast } from '../../store/settings';
 import { lesson, card } from './content';
+import { refF } from '../visibility';
 
 const OR_H2 = 4.18e-5; // Ωr h² (photons + 3.046 massless neutrinos), as in the sim-core Planck 2018 model
 const PRESETS: Record<string, { name: L; short: L; H0: number; Om: number; OL: number; rad: boolean }> = {
@@ -303,7 +304,7 @@ export default function CosmologyModule() {
             <Slider label="Ω_m" value={Om} min={0} max={3} step={0.001} onChange={setOm} display={fix(Om, 4, lang)} />
             <Slider label="Ω_Λ" value={OL} min={-0.6} max={3} step={0.001} onChange={setOL} display={fix(OL, 4, lang)} />
             <Toggle label={tx({ vi: 'Tính bức xạ Ω_r', en: 'Include radiation Ω_r' })} checked={rad} onChange={setRad} />
-            <Toggle label={tx({ vi: 'Hiện vùng tin cậy từ siêu tân tinh Ia (Union2.1, mô-đun F8)', en: 'Show SN Ia confidence regions (Union2.1, module F8)' })} checked={showSn} onChange={setShowSn} />
+            <Toggle label={tx({ vi: `Hiện vùng tin cậy từ siêu tân tinh Ia (Union2.1${refF(', mô-đun F8')})`, en: `Show SN Ia confidence regions (Union2.1${refF(', module F8')})` })} checked={showSn} onChange={setShowSn} />
             <div className="field-hint">{tx({ vi: 'Bấm vào mặt phẳng Ω_m-Ω_Λ để chọn một vũ trụ. Vùng đỏ: không có Vụ Nổ Lớn; vùng xanh: vũ trụ sẽ co lại; vùng vàng: đang tăng tốc. Các biên tính với Ω_r = 0.', en: 'Click the Ω_m-Ω_Λ plane to choose a universe. Red: no Big Bang; blue: the universe will recollapse; yellow: accelerating today. Boundaries assume Ω_r = 0.' })}</div>
           </Section>
           <Section title={tx({ vi: 'Lịch sử và số phận', en: 'History and fate' })}>

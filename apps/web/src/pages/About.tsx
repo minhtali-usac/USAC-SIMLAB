@@ -184,7 +184,7 @@ export function About() {
         <table>
           <thead><tr><th>{tx({ vi: 'Mã', en: 'Code' })}</th><th>{tx({ vi: 'Đại lượng kiểm chứng', en: 'Quantity checked' })}</th><th>{tx({ vi: 'Tham chiếu', en: 'Reference' })}</th><th>{tx({ vi: 'Sai lệch / kết quả', en: 'Deviation / result' })}</th></tr></thead>
           <tbody>
-            {HIGHLIGHTS.map((h) => (
+            {HIGHLIGHTS.filter((h) => MODULES.some((m) => m.code === h.code)).map((h) => (
               <tr key={h.code}>
                 <td><a href={`#/m/${h.code.toLowerCase()}`} className="about-code">{h.code}</a></td>
                 <td><MathText text={tx(h.what)} /></td>

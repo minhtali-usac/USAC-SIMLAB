@@ -1,5 +1,6 @@
 import type { ModuleMeta } from './types';
 import { ASTROSPHERE_URL } from './images';
+import { SHOW_F4_F8 } from './visibility';
 
 /**
  * Module catalogue (brief §4). `ready: false` entries are shown as roadmap cards.
@@ -96,6 +97,8 @@ export const MODULES: ModuleMeta[] = [
   { id: 'f3', code: 'F3', group: 'F', fidelity: 'A', ready: true, load: () => import('./f3-lightspeed/index'),
     title: { vi: 'Tốc độ ánh sáng: một chuyến đi thật', en: 'The Speed of Light: a Real Journey' },
     summary: { vi: 'Bắn một tia sáng tới Mặt Trăng, các hành tinh, các sao và thiên hà Andromeda - khoảng cách đúng hôm nay, thời gian đúng tốc độ thật.', en: 'Fire a beam of light to the Moon, the planets, the stars and Andromeda - today’s distances, timed at the true speed.' } },
+  // F4–F8: temporarily hidden, see visibility.ts
+  ...(SHOW_F4_F8 ? [
   { id: 'f4', code: 'F4', group: 'F', fidelity: 'A', ready: true, load: () => import('./f4-lookback/index'),
     title: { vi: 'Nhìn xa là nhìn về quá khứ', en: 'Looking Far Is Looking Back' },
     summary: { vi: 'Từ đám Coma tới nền vi sóng vũ trụ: thời gian nhìn lại, bốn loại khoảng cách và tuổi vũ trụ tính từ phương trình Friedmann.', en: 'From the Coma Cluster to the cosmic microwave background: look-back time, four kinds of distance and cosmic age from the Friedmann equation.' } },
@@ -108,6 +111,7 @@ export const MODULES: ModuleMeta[] = [
   { id: 'f8', code: 'F8', group: 'F', fidelity: 'A', ready: true, load: () => import('./f8-inference/index'),
     title: { vi: 'Suy luận tham số vũ trụ từ siêu tân tinh', en: 'Inferring Cosmology from Supernovae' },
     summary: { vi: '580 siêu tân tinh Ia thật (Union2.1): bấm thử một vũ trụ, xem χ², vùng tin cậy và một chuỗi MCMC tìm ra năng lượng tối.', en: '580 real SNe Ia (Union2.1): try a universe, see χ², confidence regions and an MCMC chain discover dark energy.' } },
+  ] satisfies ModuleMeta[] : []),
 ];
 
 export const GROUPS = [
@@ -116,5 +120,7 @@ export const GROUPS = [
   { id: 'C', title: { vi: 'Thuyết tương đối hẹp', en: 'Special Relativity' }, blurb: { vi: 'Thời gian, không gian và ánh sáng gần vận tốc c.', en: 'Time, space and light near the speed of light.' } },
   { id: 'D', title: { vi: 'Thuyết tương đối rộng', en: 'General Relativity' }, blurb: { vi: 'Hấp dẫn là hình học: lỗ đen, thấu kính, vũ trụ học.', en: 'Gravity as geometry: black holes, lensing, cosmology.' } },
   { id: 'E', title: { vi: 'Mở rộng thiên văn', en: 'Astronomy Extensions' }, blurb: { vi: 'Hệ Mặt Trời 3D, thang khoảng cách, sao và thiên hà.', en: '3D Solar System, distance ladder, stars and galaxies.' } },
-  { id: 'F', title: { vi: 'Ánh sáng, vũ trụ học & cấu trúc lớn', en: 'Light, Cosmology & Large-Scale Structure' }, blurb: { vi: 'Sóng ánh sáng, nhìn xa là nhìn về quá khứ, tăng trưởng cấu trúc, mạng lưới vũ trụ và suy luận tham số (phát triển từ lss-lab).', en: 'Light waves, looking far is looking back, structure growth, the cosmic web and parameter inference (developed from lss-lab).' } },
+  SHOW_F4_F8
+    ? { id: 'F', title: { vi: 'Ánh sáng, vũ trụ học & cấu trúc lớn', en: 'Light, Cosmology & Large-Scale Structure' }, blurb: { vi: 'Sóng ánh sáng, nhìn xa là nhìn về quá khứ, tăng trưởng cấu trúc, mạng lưới vũ trụ và suy luận tham số (phát triển từ lss-lab).', en: 'Light waves, looking far is looking back, structure growth, the cosmic web and parameter inference (developed from lss-lab).' } }
+    : { id: 'F', title: { vi: 'Ánh sáng & sóng', en: 'Light & Waves' }, blurb: { vi: 'Sóng điện từ, âm thanh và ánh sáng, tốc độ ánh sáng (phát triển từ lss-lab).', en: 'Electromagnetic waves, sound and light, the speed of light (developed from lss-lab).' } },
 ] as const;
