@@ -53,7 +53,7 @@ Dữ liệu tham chiếu được tải lại bằng `node reference/fetch_horiz
 | C4 | Bay gần tốc độ ánh sáng | A | Quang sai và Doppler trên bầu trời sao thật |
 | D1 | Thời gian hấp dẫn và GPS | A | Đồng hồ trên geoid (IAU L_G): +38,58 μs/ngày = 4,4647 × 10⁻¹⁰, khớp Ashby (2003); Pound–Rebka |
 | D2 | Schwarzschild và Newton | B | Geodesic float64, thế hiệu dụng, ISCO, 43″/thế kỷ |
-| D3 | Lỗ đen Schwarzschild | B | Ray tracing GPU thời gian thực (rìa bóng lệch ≤ 0,003% so với Synge), đĩa Doppler, hai đồng hồ khi rơi vào |
+| D3 | Hố đen Schwarzschild | B | Ray tracing GPU thời gian thực (rìa bóng lệch ≤ 0,003% so với Synge), đĩa Doppler, hai đồng hồ khi rơi vào |
 | D5 | Thấu kính hấp dẫn | A | Dò tia ngược, vòng Einstein, microlensing |
 | D8 | Vũ trụ học FLRW | B | Planck 2018: tuổi 13,79 tỉ năm, a(t), các loại khoảng cách |
 | E1 | Hệ Mặt Trời 3D | A | Phần tử Kepler JPL 1800–2050; sai số đo được so với DE441: 21″ (Trái Đất) tới 9,3′ (Sao Thổ); kết cấu bề mặt thật (Solar System Scope) |

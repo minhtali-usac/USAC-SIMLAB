@@ -14,7 +14,7 @@ import { VERT, FRAG } from './shader';
 import { lesson, card } from './content';
 
 const MASSES = {
-  stellar: { m: 10, name: { vi: 'Lỗ đen sao 10 M☉', en: 'Stellar BH 10 M☉' } },
+  stellar: { m: 10, name: { vi: 'Hố đen sao 10 M☉', en: 'Stellar BH 10 M☉' } },
   sgra: { m: 4.297e6, name: { vi: 'Sgr A* (4,3×10⁶ M☉)', en: 'Sgr A* (4.3×10⁶ M☉)' } },
   m87: { m: 6.5e9, name: { vi: 'M87* (6,5×10⁹ M☉)', en: 'M87* (6.5×10⁹ M☉)' } },
 } as const;
@@ -309,7 +309,7 @@ export default function BlackHoleModule() {
       }
     >
       <canvas ref={glCanvas} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', background: '#000' }} />
-      <canvas ref={ovCanvas} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', cursor: 'grab', touchAction: 'none' }} role="img" aria-label={tx({ vi: 'Ảnh ray-traced của lỗ đen Schwarzschild', en: 'Ray-traced image of a Schwarzschild black hole' })} />
+      <canvas ref={ovCanvas} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', cursor: 'grab', touchAction: 'none' }} role="img" aria-label={tx({ vi: 'Ảnh ray-traced của hố đen Schwarzschild', en: 'Ray-traced image of a Schwarzschild black hole' })} />
       <div className="stage-overlay bl">
         <span className="scale-note">{tx({ vi: `Hệ quy chiếu: máy ảnh tĩnh tại r = ${rObs} M · GPU float32`, en: `Frame: static camera at r = ${rObs} M · GPU float32` })}</span>
       </div>

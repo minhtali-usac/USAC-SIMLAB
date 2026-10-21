@@ -148,7 +148,7 @@ export default function GeodesicModule() {
         disk(ctx, px, py, 4, pal.teal);
       }
     }
-    label(ctx, `${tx({ vi: 'lỗ đen', en: 'black hole' })} 2M`, cx, cy + Math.max(2 * sc, 3) + 12, pal.gr, { size: 10.5, align: 'center' });
+    label(ctx, `${tx({ vi: 'hố đen', en: 'black hole' })} 2M`, cx, cy + Math.max(2 * sc, 3) + 12, pal.gr, { size: 10.5, align: 'center' });
   }, [samples, rMax, zoom, newton, newtonPath, pal, tx, orbit]);
 
   usePointer(canvasRef, { wheel: (dy) => setZoom((z) => Math.min(30, Math.max(0.3, z * (dy > 0 ? 0.9 : 1.1)))) });
@@ -189,7 +189,7 @@ export default function GeodesicModule() {
 
   const statusText = {
     bound: tx({ vi: 'Liên kết (tiến động)', en: 'Bound (precessing)' }),
-    plunge: tx({ vi: 'Rơi vào lỗ đen', en: 'Plunges into the hole' }),
+    plunge: tx({ vi: 'Rơi vào hố đen', en: 'Plunges into the hole' }),
     escape: tx({ vi: 'Thoát ra vô cực', en: 'Escapes to infinity' }),
     none: tx({ vi: 'Không tồn tại (p ≤ 3 + e²)', en: 'No such orbit (p ≤ 3 + e²)' }),
   }[status];
@@ -275,7 +275,7 @@ export default function GeodesicModule() {
         </>
       }
     >
-      <canvas ref={canvasRef} role="img" aria-label={tx({ vi: 'Quỹ đạo quanh lỗ đen Schwarzschild', en: 'Orbit around a Schwarzschild black hole' })} />
+      <canvas ref={canvasRef} role="img" aria-label={tx({ vi: 'Quỹ đạo quanh hố đen Schwarzschild', en: 'Orbit around a Schwarzschild black hole' })} />
       <div className="stage-overlay tr">
         <div className="legend">
           <span><i style={{ background: 'var(--gr)' }} />{tx({ vi: 'Geodesic Schwarzschild', en: 'Schwarzschild geodesic' })}</span>

@@ -63,8 +63,8 @@ export const MODULES: ModuleMeta[] = [
     title: { vi: 'Quỹ đạo Schwarzschild vs Newton', en: 'Schwarzschild vs Newton Orbits' },
     summary: { vi: 'Geodesic quanh khối cầu: thế hiệu dụng, ISCO, tiến động cận điểm, rơi vào; 43″/thế kỷ của Sao Thuỷ.', en: 'Geodesics around a mass: effective potential, ISCO, periapsis precession, plunges; Mercury’s 43″/century.' } },
   { id: 'd3', code: 'D3', group: 'D', fidelity: 'B', ready: true, load: () => import('./d3-blackhole/index'),
-    title: { vi: 'Lỗ đen Schwarzschild', en: 'Schwarzschild Black Hole' },
-    summary: { vi: 'Ray tracing thời gian thực: bóng lỗ đen, nhẫn photon, đĩa bồi tụ Doppler; rơi vào nhìn từ hai đồng hồ.', en: 'Real-time ray tracing: shadow, photon ring, Doppler-boosted disk; infall seen by two clocks.' } },
+    title: { vi: 'Hố đen Schwarzschild', en: 'Schwarzschild Black Hole' },
+    summary: { vi: 'Ray tracing thời gian thực: bóng hố đen, nhẫn photon, đĩa bồi tụ Doppler; rơi vào nhìn từ hai đồng hồ.', en: 'Real-time ray tracing: shadow, photon ring, Doppler-boosted disk; infall seen by two clocks.' } },
   { id: 'd5', code: 'D5', group: 'D', fidelity: 'A', ready: true, load: () => import('./d5-lensing/index'),
     title: { vi: 'Thấu kính hấp dẫn', en: 'Gravitational Lensing' },
     summary: { vi: 'Vòng Einstein, ảnh kép, đường cong microlensing và máy tính bán kính Einstein.', en: 'Einstein rings, double images, microlensing light curves and an Einstein-radius calculator.' } },
@@ -72,7 +72,7 @@ export const MODULES: ModuleMeta[] = [
     title: { vi: 'Vũ trụ học FLRW', en: 'FLRW Cosmology' },
     summary: { vi: 'Phương trình Friedmann với tham số Planck 2018: a(t), tuổi vũ trụ, các loại khoảng cách.', en: 'The Friedmann equation with Planck 2018 parameters: a(t), cosmic age, distance measures.' } },
   { id: 'd4', code: 'D4', group: 'D', fidelity: 'B', ready: false,
-    title: { vi: 'Lỗ đen quay (Kerr)', en: 'Rotating Black Holes (Kerr)' },
+    title: { vi: 'Hố đen quay (Kerr)', en: 'Rotating Black Holes (Kerr)' },
     summary: { vi: 'Ergosphere, kéo hệ quy chiếu, quá trình Penrose.', en: 'Ergosphere, frame dragging, Penrose process.' } },
   { id: 'd7', code: 'D7', group: 'D', fidelity: 'B', ready: false,
     title: { vi: 'Sóng hấp dẫn', en: 'Gravitational Waves' },
@@ -118,7 +118,7 @@ export const GROUPS = [
   { id: 'A', title: { vi: 'Thiên văn học nền tảng', en: 'Astronomy Foundations' }, blurb: { vi: 'Mặt Trời, Mặt Trăng, ngoại hành tinh, sao biến quang, vùng sinh sống.', en: 'Sun, Moon, exoplanets, variable stars, habitable zones.' } },
   { id: 'B', title: { vi: 'Quỹ đạo & cơ học thiên thể', en: 'Orbits & Celestial Mechanics' }, blurb: { vi: 'Từ Kepler tới bài toán nhiều vật và điểm Lagrange.', en: 'From Kepler to many bodies and Lagrange points.' } },
   { id: 'C', title: { vi: 'Thuyết tương đối hẹp', en: 'Special Relativity' }, blurb: { vi: 'Thời gian, không gian và ánh sáng gần vận tốc c.', en: 'Time, space and light near the speed of light.' } },
-  { id: 'D', title: { vi: 'Thuyết tương đối rộng', en: 'General Relativity' }, blurb: { vi: 'Hấp dẫn là hình học: lỗ đen, thấu kính, vũ trụ học.', en: 'Gravity as geometry: black holes, lensing, cosmology.' } },
+  { id: 'D', title: { vi: 'Thuyết tương đối rộng', en: 'General Relativity' }, blurb: { vi: 'Hấp dẫn là hình học: hố đen, thấu kính, vũ trụ học.', en: 'Gravity as geometry: black holes, lensing, cosmology.' } },
   { id: 'E', title: { vi: 'Mở rộng thiên văn', en: 'Astronomy Extensions' }, blurb: { vi: 'Hệ Mặt Trời 3D, thang khoảng cách, sao và thiên hà.', en: '3D Solar System, distance ladder, stars and galaxies.' } },
   SHOW_F4_F8
     ? { id: 'F', title: { vi: 'Ánh sáng, vũ trụ học & cấu trúc lớn', en: 'Light, Cosmology & Large-Scale Structure' }, blurb: { vi: 'Sóng ánh sáng, nhìn xa là nhìn về quá khứ, tăng trưởng cấu trúc, mạng lưới vũ trụ và suy luận tham số (phát triển từ lss-lab).', en: 'Light waves, looking far is looking back, structure growth, the cosmic web and parameter inference (developed from lss-lab).' } }

@@ -108,8 +108,8 @@ export function Home() {
           </h1>
           <p className="lead">
             {tx({
-              vi: 'Chơi như một trò chơi, chính xác như một giáo trình. Mô phỏng tương tác từ chuyển động Mặt Trời đến lỗ đen - dữ liệu thật, phương trình thật, sai số được ghi rõ.',
-              en: 'Play like a game, precise like a textbook. Interactive simulations from the Sun’s motion to black holes - real data, real equations, stated errors.',
+              vi: 'Trực quan như một trò chơi, vững vàng về kiến thức khoa học. Từ chuyển động của Mặt Trời đến những hố đen bí ẩn, mỗi mô phỏng giúp bạn khám phá vũ trụ qua dữ liệu, phương trình vật lý và những giới hạn được trình bày rõ ràng.',
+              en: 'As intuitive as a game, grounded in solid science. From the motion of the Sun to mysterious black holes, every simulation lets you explore the universe through data, physical equations and clearly stated limits.',
             })}
           </p>
           <div className="hero-cta">

@@ -42,7 +42,7 @@ Các bảng dưới đây ghi nguồn cho mọi số liệu và thuật toán đ
 | Kopparapu et al. 2013 (ApJ 765, 131) và 2014 (ApJL 787, L29) | Vùng sinh sống được |
 | Benedict et al. 2007, AJ 133, 1810 | Định luật chu kỳ–độ trưng của Cepheid |
 | Ashby 2003, Living Reviews in Relativity 6, 1 | Hiệu chỉnh đồng hồ GPS |
-| Bardeen, Press & Teukolsky 1972 | Bán kính đặc trưng của lỗ đen Kerr |
+| Bardeen, Press & Teukolsky 1972 | Bán kính đặc trưng của hố đen Kerr |
 | Wyman, Sloan & Shirley 2013, JCGT 2(2) | Hàm ghép màu CIE |
 
 ## Ảnh thiên văn trên thẻ module
