@@ -1,0 +1,63 @@
+{
+  "generated": "2026-10-20T13:52:21.748Z",
+  "reference": "JPL Horizons DE441, apparent geocentric RA/Dec, 1990–2040, 37 d",
+  "angleArcsec": {
+    "max": 34.03545836738502,
+    "rms": 12.99267406039765,
+    "n": 494
+  },
+  "distanceAu": {
+    "max": 0.0000728046604679955,
+    "rms": 0.00002926077127193969,
+    "n": 494
+  },
+  "span": [
+    "1990-Jan-01 00:00",
+    "2039-Dec-11 00:00"
+  ],
+  "riseSet": {
+    "reference": "Horizons R_T_S_ONLY='TVH', 2025, 4 sites, HH:MM (end of minute)",
+    "rows": [
+      {
+        "site": "hanoi",
+        "lat": 21.0285,
+        "n": 730,
+        "missing": 0,
+        "maxBeyondQuantMin": 0.047880783677101135,
+        "meanMin": -0.48036366956282966,
+        "maxAbsMin": 1.007634848356247,
+        "p95AbsMin": 0.9332035481929779
+      },
+      {
+        "site": "hcmc",
+        "lat": 10.8231,
+        "n": 730,
+        "missing": 0,
+        "maxBeyondQuantMin": 0.04522405564785004,
+        "meanMin": -0.491966454745972,
+        "maxAbsMin": 1.0058793425559998,
+        "p95AbsMin": 0.9249651432037354
+      },
+      {
+        "site": "helsinki",
+        "lat": 60.1699,
+        "n": 730,
+        "missing": 0,
+        "maxBeyondQuantMin": 0.09739838540554047,
+        "meanMin": -0.4747184545618214,
+        "maxAbsMin": 1.046396791934967,
+        "p95AbsMin": 0.9303878992795944
+      },
+      {
+        "site": "sydney",
+        "lat": -33.8688,
+        "n": 730,
+        "missing": 0,
+        "maxBeyondQuantMin": 0.04575513303279877,
+        "meanMin": -0.47476151687641666,
+        "maxAbsMin": 1.0143397003412247,
+        "p95AbsMin": 0.9271316975355148
+      }
+    ]
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "generated": "2026-10-20T13:51:44.537Z",
+  "units": "q = 1, μ = 1 for the e grid; au, days, μ☉ for presets",
+  "grid": [
+    {
+      "e": 0,
+      "kind": "circle",
+      "maxResidual": 0,
+      "maxEnergyDev": 2.220446049250313e-16,
+      "maxHDev": 2.220446049250313e-16,
+      "maxRoundTripRel": 7.067899292141149e-17,
+      "sectorMaxRelDev": 6.661338147750939e-16,
+      "sectorMaxRelDevQuad": 6.661338147750939e-16
+    },
+    {
+      "e": 0.000001,
+      "kind": "ellipse",
+      "maxResidual": 8.881784197001252e-16,
+      "maxEnergyDev": 3.885780586188048e-16,
+      "maxHDev": 4.440892098500626e-16,
+      "maxRoundTripRel": 1.413577738058972e-16,
+      "sectorMaxRelDev": 1.4432899320127035e-15,
+      "sectorMaxRelDevQuad": 2.2315482794965646e-14
+    },
+    {
+      "e": 0.0167,
+      "kind": "ellipse",
+      "maxResidual": 8.881784197001252e-16,
+      "maxEnergyDev": 4.440892098500626e-16,
+      "maxHDev": 4.440892098500626e-16,
+      "maxRoundTripRel": 2.7566358690734864e-16,
+      "sectorMaxRelDev": 1.4432899320127035e-15,
+      "sectorMaxRelDevQuad": 1.021405182655144e-14
+    },
+    {
+      "e": 0.3,
+      "kind": "ellipse",
+      "maxResidual": 8.881784197001252e-16,
+      "maxEnergyDev": 4.440892098500626e-16,
+      "maxHDev": 4.440892098500626e-16,
+      "maxRoundTripRel": 3.311520133209672e-16,
+      "sectorMaxRelDev": 1.3322676295501878e-15,
+      "sectorMaxRelDevQuad": 5.995204332975845e-15
+    },
+    {
+      "e": 0.7,
+      "kind": "ellipse",
+      "maxResidual": 8.881784197001252e-16,
+      "maxEnergyDev": 4.440892098500626e-16,
+      "maxHDev": 6.661338147750939e-16,
+      "maxRoundTripRel": 2.7872984710659627e-16,
+      "sectorMaxRelDev": 3.1086244689504383e-15,
+      "sectorMaxRelDevQuad": 5.10702591327572e-15
+    },
+    {
+      "e": 0.9,
+      "kind": "ellipse",
+      "maxResidual": 1.3322676295501878e-15,
+      "maxEnergyDev": 6.106226635438361e-16,
+      "maxHDev": 1.6653345369377348e-15,
+      "maxRoundTripRel": 6.43699009032706e-16,
+      "sectorMaxRelDev": 7.327471962526033e-15,
+      "sectorMaxRelDevQuad": 7.105427357601002e-15
+    },
+    {
+      "e": 0.99,
+      "kind": "ellipse",
+      "maxResidual": 1.3322676295501878e-15,
+      "maxEnergyDev": 2.220446049250313e-16,
+      "maxHDev": 1.4765966227514582e-14,
+      "maxRoundTripRel": 2.533135106303391e-15,
+      "sectorMaxRelDev": 3.441691376337985e-14,
+      "sectorMaxRelDevQuad": 2.0872192862952943e-14
+    },
+    {
+      "e": 0.999,
+      "kind": "ellipse",
+      "maxResidual": 1.3322676295501878e-15,
+      "maxEnergyDev": 2.7755575615628914e-16,
+      "maxHDev": 1.375566327510569e-13,
+      "maxRoundTripRel": 9.008353065076392e-15,
+      "sectorMaxRelDev": 9.414691248821327e-14,
+      "sectorMaxRelDevQuad": 7.438494264988549e-14
+    },
+    {
+      "e": 0.999999,
+      "kind": "ellipse",
+      "maxResidual": 1.3322676295501878e-15,
+      "maxEnergyDev": 2.7755575615628914e-16,
+      "maxHDev": 1.3791967568010932e-10,
+      "maxRoundTripRel": 2.5438660109855855e-13,
+      "sectorMaxRelDev": 6.126210649881614e-12,
+      "sectorMaxRelDevQuad": null
+    },
+    {
+      "e": 1,
+      "kind": "parabola",
+      "maxResidual": 2.2239987629291136e-12,
+      "maxEnergyDev": 4.440892098500626e-16,
+      "maxHDev": 8.881784197001252e-16,
+      "maxRoundTripRel": 1.1028329429794837e-13,
+      "sectorMaxRelDev": 6.206146707654625e-14,
+      "sectorMaxRelDevQuad": null
+    },
+    {
+      "e": 1.000001,
+      "kind": "hyperbola",
+      "maxResidual": 8.223874256107999e-16,
+      "maxEnergyDev": 1.1102230246251565e-16,
+      "maxHDev": 1.6281056502975844e-9,
+      "maxRoundTripRel": 3.801727294452742e-12,
+      "sectorMaxRelDev": 3.51039197710179e-11,
+      "sectorMaxRelDevQuad": null
+    },
+    {
+      "e": 1.001,
+      "kind": "hyperbola",
+      "maxResidual": 5.551125918959698e-16,
+      "maxEnergyDev": 1.1102230246251565e-16,
+      "maxHDev": 1.720068532051755e-12,
+      "maxRoundTripRel": 1.3216138817372973e-13,
+      "sectorMaxRelDev": 1.233457780358549e-13,
+      "sectorMaxRelDevQuad": 1.021405182655144e-13
+    },
+    {
+      "e": 1.2,
+      "kind": "hyperbola",
+      "maxResidual": 6.991693104681346e-16,
+      "maxEnergyDev": 4.440892098500626e-16,
+      "maxHDev": 9.992007221626409e-15,
+      "maxRoundTripRel": 1.1185305880870909e-14,
+      "sectorMaxRelDev": 1.1546319456101628e-14,
+      "sectorMaxRelDevQuad": 1.3322676295501878e-14
+    },
+    {
+      "e": 2,
+      "kind": "hyperbola",
+      "maxResidual": 6.535529210449782e-16,
+      "maxEnergyDev": 6.661338147750939e-16,
+      "maxHDev": 1.7763568394002505e-15,
+      "maxRoundTripRel": 6.0396132539608514e-15,
+      "sectorMaxRelDev": 5.10702591327572e-15,
+      "sectorMaxRelDevQuad": 2.3314683517128287e-15
+    },
+    {
+      "e": 3.5,
+      "kind": "hyperbola",
+      "maxResidual": 5.2192829752885475e-16,
+      "maxEnergyDev": 1.3322676295501878e-15,
+      "maxHDev": 6.661338147750939e-16,
+      "maxRoundTripRel": 3.5108334685767e-15,
+      "sectorMaxRelDev": 7.66053886991358e-15,
+      "sectorMaxRelDevQuad": 4.218847493575595e-15
+    }
+  ],
+  "presets": [
+    {
+      "id": "mercury",
+      "periodDays": 87.96945862906179,
+      "periodTestParticleDays": 87.96946593127781,
+      "refPeriodDays": 87.96925644194627,
+      "relDiff": 0.0000022983838183776584,
+      "source": "JPL Standish Table 1 mean-longitude rate"
+    },
+    {
+      "id": "venus",
+      "periodDays": 224.70239915409746,
+      "periodTestParticleDays": 224.7026741824692,
+      "refPeriodDays": 224.70080116586078,
+      "relDiff": 0.000007111626787237313,
+      "source": "JPL Standish Table 1 mean-longitude rate"
+    },
+    {
+      "id": "earth",
+      "periodDays": 365.25777303760293,
+      "periodTestParticleDays": 365.2583283080187,
+      "refPeriodDays": 365.256,
+      "relDiff": 0.00000485423265583762,
+      "source": "NASA Earth Fact Sheet (sidereal orbit period 365.256 d)"
+    },
+    {
+      "id": "mars",
+      "periodDays": 686.9924731524742,
+      "periodTestParticleDays": 686.9925840073615,
+      "refPeriodDays": 686.9797315332722,
+      "relDiff": 0.000018547300039806203,
+      "source": "JPL Standish Table 1 mean-longitude rate"
+    },
+    {
+      "id": "jupiter",
+      "periodDays": 4332.692043707998,
+      "periodTestParticleDays": 4334.759603064563,
+      "refPeriodDays": 4332.81712752323,
+      "relDiff": -0.000028868934817793956,
+      "source": "JPL Standish Table 1 mean-longitude rate"
+    },
+    {
+      "id": "saturn",
+      "periodDays": 10755.532264558607,
+      "periodTestParticleDays": 10757.069262176146,
+      "refPeriodDays": 10755.884336133118,
+      "relDiff": -0.000032732926787626404,
+      "source": "JPL Standish Table 1 mean-longitude rate"
+    },
+    {
+      "id": "uranus",
+      "periodDays": 30702.451225351586,
+      "periodTestParticleDays": 30703.121445019344,
+      "refPeriodDays": 30687.40144359826,
+      "relDiff": 0.0004904221617130222,
+      "source": "JPL Standish Table 1 mean-longitude rate"
+    },
+    {
+      "id": "neptune",
+      "periodDays": 60226.23463837255,
+      "periodTestParticleDays": 60227.78559374623,
+      "refPeriodDays": 60189.65901627789,
+      "relDiff": 0.0006076728576378532,
+      "source": "JPL Standish Table 1 mean-longitude rate"
+    },
+    {
+      "id": "ceres",
+      "periodDays": 1679.8531193584379,
+      "periodTestParticleDays": 1679.8531197548082,
+      "refPeriodDays": 1679.853119758983,
+      "relDiff": -2.3844060059730054e-10,
+      "source": "JPL SBDB (osculating, epoch JD 2461200.5)"
+    },
+    {
+      "id": "halley",
+      "periodDays": 27728.04608783531,
+      "periodTestParticleDays": 27728.04608783531,
+      "refPeriodDays": 27728.04608790421,
+      "relDiff": -2.484790151413563e-12,
+      "source": "JPL SBDB (osculating, epoch JD 2439875.5 = 1968)"
+    }
+  ],
+  "gaussianYearDays": 365.2568983263287,
+  "barycentreMaxError": 4.577566798522237e-16,
+  "solvers": {
+    "solveKepler": "Halley, Danby starter",
+    "solveKeplerHyperbolic": "Halley, asinh starter",
+    "solveBarker": "Cardano closed form"
+  }
+}

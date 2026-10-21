@@ -1,0 +1,109 @@
+{
+  "generated": "2026-10-20T15:09:36.679Z",
+  "ages": {
+    "edsNumeric": 9.634370102283862,
+    "edsExact": 9.634370102283862,
+    "flatNumeric": 13.791501026403735,
+    "flatExact": 13.79150102640378,
+    "planck": 13.785929407124218
+  },
+  "aOfT": {
+    "edsMaxRelErr": 2.4498625350588554e-11,
+    "deSitterMaxRelErr": 6.587552725534351e-11,
+    "closed": [
+      {
+        "Om": 1.5,
+        "aMaxExact": 3,
+        "aMaxRoot": 2.9999999999999996,
+        "aMaxNumeric": 2.9999897493576624,
+        "tCrunchExact": 192.61970346303022,
+        "tCrunchNumeric": 192.6194656687407,
+        "cycloidRelErr": 0.000044218224622860625
+      },
+      {
+        "Om": 2,
+        "aMaxExact": 2,
+        "aMaxRoot": 1.9999999999999998,
+        "aMaxNumeric": 1.999947142713928,
+        "tCrunchExact": 90.80179900590038,
+        "tCrunchNumeric": 90.80158674482995,
+        "cycloidRelErr": 0.00003331342433587903
+      },
+      {
+        "Om": 3,
+        "aMaxExact": 1.5,
+        "aMaxRoot": 1.4999999999999998,
+        "aMaxNumeric": 1.499965326561774,
+        "tCrunchExact": 48.154925865757555,
+        "tCrunchNumeric": 48.15475273080797,
+        "cycloidRelErr": 0.000035158117580369463
+      },
+      {
+        "Om": 5,
+        "aMaxExact": 1.25,
+        "aMaxRoot": 1.25,
+        "aMaxNumeric": 1.2499999012290417,
+        "tCrunchExact": 28.375562189343867,
+        "tCrunchNumeric": 28.3754302392906,
+        "cycloidRelErr": 0.00006744783338985538
+      }
+    ]
+  },
+  "boundary": {
+    "maxAbsErrRecollapse": 2.8033131371785203e-15,
+    "maxAbsErrNoBigBang": 7.105427357601002e-15,
+    "samples": [
+      {
+        "Om": 0.5,
+        "recollapse": -1.7763568394002505e-15,
+        "recollapseCPT": 0,
+        "noBigBang": 1.9999999999999982,
+        "noBigBangCPT": 2
+      },
+      {
+        "Om": 1,
+        "recollapse": -1.7763568394002505e-15,
+        "recollapseCPT": 0,
+        "noBigBang": 2.598076211353318,
+        "noBigBangCPT": 2.5980762113533165
+      },
+      {
+        "Om": 1.5,
+        "recollapse": 0.008665856025716678,
+        "recollapseCPT": 0.008665856025717861,
+        "noBigBang": 3.117803986558373,
+        "noBigBangCPT": 3.1178039865583718
+      },
+      {
+        "Om": 2,
+        "recollapse": 0.041889066001582265,
+        "recollapseCPT": 0.04188906600158182,
+        "noBigBang": 3.596266658713871,
+        "noBigBangCPT": 3.596266658713868
+      },
+      {
+        "Om": 2.5,
+        "recollapse": 0.0964445593744454,
+        "recollapseCPT": 0.09644455937444624,
+        "noBigBang": 4.048117104290975,
+        "noBigBangCPT": 4.048117104290977
+      },
+      {
+        "Om": 3,
+        "recollapse": 0.16765886730116897,
+        "recollapseCPT": 0.16765886730116647,
+        "noBigBang": 4.480953529280869,
+        "noBigBangCPT": 4.480953529280867
+      }
+    ]
+  },
+  "planck": {
+    "zAcceleration": 0.6416104237037461,
+    "zAccelerationFlatNoRadExact": 0.6422101161899938,
+    "zAccelerationFlatNoRadNumeric": 0.6422101161899936,
+    "zMatterRadiationEquality": 3406.1222467942584,
+    "zMatterLambdaEquality": 0.30336544400995735,
+    "q0": -0.5331673825431168,
+    "fractionsSumAtA037": 1
+  }
+}

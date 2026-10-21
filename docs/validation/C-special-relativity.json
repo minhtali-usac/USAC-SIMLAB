@@ -1,0 +1,74 @@
+{
+  "generated": "2026-10-20T13:52:26.527Z",
+  "forward": {
+    "betaCmb3000": 0.999998349281089,
+    "oneMinusBeta": 0.0000016507189109846363,
+    "D": 1100.723542275122,
+    "checkD": 1100.7235422680033,
+    "halfSkyConeDeg09": 25.841932763167126
+  },
+  "gamma": [
+    {
+      "eps": 0.001,
+      "factoredRelErr": 3.3306690738754696e-16,
+      "naiveRelErr": 6.8833827526759706e-15
+    },
+    {
+      "eps": 0.000001,
+      "factoredRelErr": 1.4377832258105627e-11,
+      "naiveRelErr": 1.9908297232973382e-11
+    },
+    {
+      "eps": 1e-9,
+      "factoredRelErr": 1.414096617580185e-8,
+      "naiveRelErr": 1.3890966155116757e-8
+    },
+    {
+      "eps": 1e-12,
+      "factoredRelErr": 0.0000110610435781755,
+      "naiveRelErr": 0.00001106104332793123
+    }
+  ],
+  "maxIntervalErr": 6.730770526350055e-14,
+  "maxAddErr": 3.3306690738754696e-16,
+  "twins": [
+    {
+      "beta": 0.8,
+      "distanceLy": 4.24,
+      "tHome": 10.6,
+      "tauTraveller": 6.359999999999999,
+      "tauFromBoost": 6.360000000000001,
+      "relErr": 2.220446049250313e-16
+    },
+    {
+      "beta": 0.6,
+      "distanceLy": 4.24,
+      "tHome": 14.133333333333335,
+      "tauTraveller": 11.306666666666668,
+      "tauFromBoost": 11.306666666666668,
+      "relErr": 0
+    },
+    {
+      "beta": 0.99,
+      "distanceLy": 8,
+      "tHome": 16.161616161616163,
+      "tauTraveller": 2.2798765219662047,
+      "tauFromBoost": 2.279876521966216,
+      "relErr": 4.884981308350689e-15
+    }
+  ],
+  "aberration": {
+    "maxCosErr": 2.220446049250313e-15,
+    "maxDopplerRelErr": 4.1722181265413383e-13
+  },
+  "muon": {
+    "cTau0": 658.6383641485438,
+    "beta": 0.9995,
+    "gamma": 31.626730190074014,
+    "h": 15000,
+    "tLab": 0.00005005964410177369,
+    "survivalEarthFrame": 0.4865306052315323,
+    "survivalMuonFrame": 0.48653060523153224,
+    "survivalClassical": 1.2715036238018217e-10
+  }
+}

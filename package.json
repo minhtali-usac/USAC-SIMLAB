@@ -1,0 +1,39 @@
+{
+  "name": "usac-simlab",
+  "private": true,
+  "version": "0.1.0",
+  "description": "USAC SimLab — USAC Astronomy Simulation Laboratory",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @usac/web",
+    "build": "npm run build -w @usac/web",
+    "preview": "npm run preview -w @usac/web",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p packages/sim-core/tsconfig.json && tsc -p apps/web/tsconfig.json",
+    "validate:moon": "vite-node packages/sim-core/scripts/validate-moon.ts",
+    "validate:exo": "vite-node packages/sim-core/scripts/validate-exo.ts",
+    "validate:var": "vite-node packages/sim-core/scripts/validate-var.ts",
+    "validate:hz": "vite-node packages/sim-core/scripts/validate-hz.ts",
+    "validate:shadow": "vite-node packages/sim-core/scripts/validate-shadow.ts",
+    "validate:ephem": "vite-node packages/sim-core/scripts/validate-ephem.ts",
+    "validate:sn": "vite-node packages/sim-core/scripts/validate-sn.ts",
+    "validate:nbody": "vite-node packages/sim-core/scripts/validate-nbody.ts",
+    "validate:sr": "vite-node packages/sim-core/scripts/validate-sr.ts",
+    "validate:gr": "vite-node packages/sim-core/scripts/validate-gr.ts",
+    "validate:lens": "vite-node packages/sim-core/scripts/validate-lens.ts",
+    "validate:cosmology": "vite-node packages/sim-core/scripts/validate-cosmology.ts",
+    "validate:cosmicweb": "vite-node packages/sim-core/scripts/validate-cosmicweb.ts",
+    "validate": "npm run -s validate:kepler && npm run -s validate:transfer && npm run -s validate:cr3bp && npm run -s validate:moon && npm run -s validate:exo && npm run -s validate:var && npm run -s validate:hz && npm run -s validate:shadow && npm run -s validate:ephem && npm run -s validate:sn && npm run -s validate:nbody && npm run -s validate:sr && npm run -s validate:gr && npm run -s validate:lens && npm run -s validate:cosmicweb && npm run -s validate:cosmology",
+    "validate:kepler": "vite-node packages/sim-core/scripts/validate-kepler.ts",
+    "validate:transfer": "vite-node packages/sim-core/scripts/validate-transfer.ts",
+    "validate:cr3bp": "vite-node packages/sim-core/scripts/validate-cr3bp.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

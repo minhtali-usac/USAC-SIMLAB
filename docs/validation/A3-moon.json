@@ -1,0 +1,137 @@
+{
+  "model": "A3 - phases: Meeus ch.49; position/illumination/rise-set: Astronomical Almanac low-precision lunar series + Meeus ch.25 Sun; ΔT from table (Espenak & Meeus / IERS)",
+  "reference": {
+    "phases": "JPL Horizons API (DE441), quantity 31 apparent ecliptic lon/lat of date, geocentre, 6 h grid + Lagrange interpolation",
+    "riseSet": "JPL Horizons API (DE441), R_T_S_ONLY='TVH' (refracted apparent horizon), 1-min resolution, UT"
+  },
+  "generated": "2026-10-21T03:56:13.196Z",
+  "phases": {
+    "all": {
+      "n": 1533,
+      "meanMin": 0.022572073101297517,
+      "medianAbsMin": 0.05089022219181061,
+      "p95AbsMin": 0.16177810728549957,
+      "maxAbsMin": 0.2864699810743332,
+      "missing": 0
+    },
+    "newMoon": {
+      "n": 384,
+      "meanMin": 0.009083971381187439,
+      "medianAbsMin": 0.051678791642189026,
+      "p95AbsMin": 0.15586316585540771,
+      "maxAbsMin": 0.2864699810743332,
+      "missing": 0
+    },
+    "firstQuarter": {
+      "n": 384,
+      "meanMin": 0.028884057537652552,
+      "medianAbsMin": 0.05183771252632141,
+      "p95AbsMin": 0.17086677253246307,
+      "maxAbsMin": 0.2370663732290268,
+      "missing": 0
+    },
+    "fullMoon": {
+      "n": 382,
+      "meanMin": 0.012465371550377751,
+      "medianAbsMin": 0.04483312368392944,
+      "p95AbsMin": 0.15026137232780457,
+      "maxAbsMin": 0.24845167994499207,
+      "missing": 0
+    },
+    "lastQuarter": {
+      "n": 383,
+      "meanMin": 0.039847240279922286,
+      "medianAbsMin": 0.053975433111190796,
+      "p95AbsMin": 0.1640848070383072,
+      "maxAbsMin": 0.21814607083797455,
+      "missing": 0
+    },
+    "first": "2000-01-06T18:13:38.113Z",
+    "last": "2030-12-31T13:36:10.784Z"
+  },
+  "phasesPreviousMethod": {
+    "method": "root-finding on the Almanac low-precision series (before 2026-10)",
+    "all": {
+      "n": 1533,
+      "meanMin": 0.15117928006644352,
+      "medianAbsMin": 8.034310340881348,
+      "p95AbsMin": 20.056614875793457,
+      "maxAbsMin": 29.4398832321167,
+      "missing": 0
+    }
+  },
+  "riseSet": {
+    "all": {
+      "n": 8474,
+      "meanMin": -0.5083126999773674,
+      "medianAbsMin": 0.5591446906328201,
+      "p95AbsMin": 1.479092761874199,
+      "maxAbsMin": 3.9725493639707565,
+      "missing": 0
+    },
+    "perSite": {
+      "hanoi": {
+        "n": 1413,
+        "meanMin": -0.5075629468366598,
+        "medianAbsMin": 0.5460099130868912,
+        "p95AbsMin": 1.3154444843530655,
+        "maxAbsMin": 2.304718941450119,
+        "missing": 0,
+        "lat": 21.0285
+      },
+      "hcmc": {
+        "n": 1413,
+        "meanMin": -0.5193147993391487,
+        "medianAbsMin": 0.5312832444906235,
+        "p95AbsMin": 1.357419714331627,
+        "maxAbsMin": 2.356158345937729,
+        "missing": 0,
+        "lat": 10.8231
+      },
+      "equator": {
+        "n": 1412,
+        "meanMin": -0.4976740770738456,
+        "medianAbsMin": 0.5168496072292328,
+        "p95AbsMin": 1.3023003190755844,
+        "maxAbsMin": 2.3322591930627823,
+        "missing": 0,
+        "lat": 0
+      },
+      "sydney": {
+        "n": 1412,
+        "meanMin": -0.5037596750023007,
+        "medianAbsMin": 0.5345743149518967,
+        "p95AbsMin": 1.384630724787712,
+        "maxAbsMin": 2.323804199695587,
+        "missing": 0,
+        "lat": -33.8688
+      },
+      "london": {
+        "n": 1412,
+        "meanMin": -0.508546467828261,
+        "medianAbsMin": 0.5876673012971878,
+        "p95AbsMin": 1.5160348266363144,
+        "maxAbsMin": 2.8542928397655487,
+        "missing": 0,
+        "lat": 51.5074
+      },
+      "oslo": {
+        "n": 1412,
+        "meanMin": -0.5130109729155603,
+        "medianAbsMin": 0.6801552325487137,
+        "p95AbsMin": 1.863778531551361,
+        "maxAbsMin": 3.9725493639707565,
+        "missing": 0,
+        "lat": 59.9139
+      }
+    }
+  },
+  "illumination": {
+    "reference": "JPL Horizons API (DE441), quantity 10 illuminated fraction, geocentre, 6 h",
+    "n": 2925,
+    "meanPct": 0.017924544390265813,
+    "medianAbsPct": 0.031079090422277134,
+    "p95AbsPct": 0.11682393271778002,
+    "maxAbsPct": 0.18618641680524517
+  }
+}

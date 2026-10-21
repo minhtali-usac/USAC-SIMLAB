@@ -1,0 +1,34 @@
+{
+  "generated": "2026-10-20T13:52:20.493Z",
+  "sun": [
+    {
+      "limit": "recentVenus",
+      "computedAu": 0.7503752814845803,
+      "referenceAu": 0.75,
+      "diffAu": 0.0003752814845803254
+    },
+    {
+      "limit": "runawayGreenhouse",
+      "computedAu": 0.950443247520335,
+      "referenceAu": 0.95,
+      "diffAu": 0.0004432475203350883
+    },
+    {
+      "limit": "maximumGreenhouse",
+      "computedAu": 1.6760038078849773,
+      "referenceAu": 1.68,
+      "diffAu": -0.003996192115022668
+    },
+    {
+      "limit": "earlyMars",
+      "computedAu": 1.7677669529663689,
+      "referenceAu": 1.77,
+      "diffAu": -0.0022330470336311414
+    }
+  ],
+  "maxSunDiffAu": 0.003996192115022668,
+  "earthTeq030": 254.58592419270857,
+  "earthTeq0306": 254.0386205814548,
+  "ordered": true,
+  "maxRelFluxErr": 2.220446049250313e-16
+}

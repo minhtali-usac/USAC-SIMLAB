@@ -1,0 +1,10 @@
+{
+  "name": "USAC SimLab",
+  "short_name": "SimLab",
+  "description": "USAC Astronomy Simulation Laboratory",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#05070f",
+  "theme_color": "#05070f",
+  "icons": [{ "src": "usac-logo.png", "sizes": "256x256", "type": "image/png" }]
+}
