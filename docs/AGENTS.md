@@ -42,3 +42,7 @@ npm run build      # bản tĩnh
 - [ ] Trạng thái khôi phục được qua URL.
 - [ ] Dùng được trên điện thoại và bằng bàn phím.
 - [ ] Đã có người chuyên môn rà soát nội dung khoa học.
+
+## 5. Giấy phép và mã phái sinh
+
+Dự án theo GNU GPL-2.0-or-later (xem `LICENSE`, `NOTICE.md`). Khi đưa mã hoặc dữ liệu từ nguồn khác vào, kiểm tra giấy phép có tương thích GPL không, ghi nguồn và thay đổi ở đầu tệp, và thêm vào `NOTICE.md` hoặc `CREDITS.md`. Không đưa mã không rõ giấy phép vào kho.

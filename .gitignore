@@ -5,3 +5,6 @@ dist/
 .vite/
 reference/golden.json
 reference/__pycache__/
+
+# upstream Celestia source (GPL, used as input to reference/extract_celestia_*.mjs); not part of this repository, see NOTICE.md
+Celestia-master/

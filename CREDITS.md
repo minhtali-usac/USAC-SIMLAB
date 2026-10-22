@@ -26,6 +26,11 @@ Các bảng dưới đây ghi nguồn cho mọi số liệu và thuật toán đ
 | Astronomical Almanac, công thức Mặt Trăng độ chính xác thấp | Vị trí Mặt Trăng | `sim-core/src/celestial/moon.ts` |
 | Yale Bright Star Catalogue, bản 5 (Hoffleit & Warren 1991) | Toạ độ J2000 của khoảng 60 sao sáng | `sim-core/src/data/brightStars.ts` |
 | NASA Planetary Fact Sheet | Bán kính, khối lượng và chu kỳ quay của hành tinh | `sim-core/src/celestial/planets.ts` |
+| P. Bretagnon & G. Francou 1988, A&A 202, 309 (VSOP87), bản rút gọn trong Celestia | Vị trí tám hành tinh trong E1 | `sim-core/src/ephemeris/vsop87*.ts` |
+| Celestia: lý thuyết vệ tinh (Meeus ch. 44, 46, 47; Laskar & Jacobson 1987; Emelyanov & Samorodov 2015) | Mặt Trăng và 16 vệ tinh trong E1 | `sim-core/src/ephemeris/satellite*.ts` |
+| Archinal et al. 2018, CeMDA 130, 22 (IAU WGCCRE), qua Celestia | Hướng cực quay và pha quay | `sim-core/src/ephemeris/iauRotationData.ts` |
+| Park et al. 2021, AJ 161, 105 (JPL DE440/DE441) | Tỉ số khối lượng Trái Đất/Mặt Trăng; dữ liệu đối chiếu qua JPL Horizons | `sim-core/src/ephemeris/earthMoon.ts` |
+| McEwen 1996, Lunar and Planetary Science 27, 841 | Hàm ánh sáng lunar-Lambert | `web/src/lib/celestiaShaders.ts` |
 
 ### Sao và ngoại hành tinh
 
@@ -44,6 +49,10 @@ Các bảng dưới đây ghi nguồn cho mọi số liệu và thuật toán đ
 | Ashby 2003, Living Reviews in Relativity 6, 1 | Hiệu chỉnh đồng hồ GPS |
 | Bardeen, Press & Teukolsky 1972 | Bán kính đặc trưng của hố đen Kerr |
 | Wyman, Sloan & Shirley 2013, JCGT 2(2) | Hàm ghép màu CIE |
+
+## Celestia (GNU GPL)
+
+Mô-đun E1 chứa mã phái sinh từ **Celestia** (Bản quyền (C) 2001-nay, Celestia Development Team; GNU GPL phiên bản 2 hoặc mới hơn; https://celestiaproject.space). Để tuân thủ giấy phép, USAC SimLab cũng phát hành theo **GPL-2.0-or-later** ([LICENSE](LICENSE)). Danh sách tệp phái sinh, thay đổi, ngày thay đổi và cách tái lập đầu vào nằm trong [NOTICE.md](NOTICE.md).
 
 ## Ảnh thiên văn trên thẻ module
 

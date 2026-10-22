@@ -8,6 +8,7 @@ import { SiteFooter, CLUB_EMAIL, CLUB_FANPAGE } from '../components/SiteFooter';
 import { MODULES, GROUPS } from '../modules/registry';
 import { ASTROSPHERE_URL } from '../modules/images';
 import { PHYSICS_TESTS } from './Home';
+import { SOURCE_URL } from '../components/SiteFooter';
 
 /** Paragraph with **bold** and $TeX$ support. */
 function P({ children }: { children: string }) {
@@ -16,7 +17,7 @@ function P({ children }: { children: string }) {
 }
 
 /** Number of reproducible reports in docs/validation (one per `npm run validate:*` output file). */
-const VALIDATION_REPORTS = 17;
+const VALIDATION_REPORTS = 19;
 
 const IMAGE_CREDITS: { href: string; caption: L; credit: string; license: string }[] = [
   { href: 'https://commons.wikimedia.org/wiki/File:The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg', caption: { vi: 'Mặt Trời ở bước sóng cực tím - SDO/AIA, ngày 19/8/2010, màu giả', en: 'The Sun in extreme ultraviolet - SDO/AIA, 19 Aug 2010, false colour' }, credit: 'NASA/SDO (AIA)', license: 'Public Domain' },
@@ -55,7 +56,9 @@ const IMAGE_CREDITS: { href: string; caption: L; credit: string; license: string
 const HIGHLIGHTS: { code: string; what: L; ref: L; result: L }[] = [
   { code: 'A1', what: { vi: 'Vị trí biểu kiến của Mặt Trời, 1990–2040 (494 thời điểm)', en: 'Apparent position of the Sun, 1990–2040 (494 epochs)' }, ref: { vi: 'JPL Horizons DE441', en: 'JPL Horizons DE441' }, result: { vi: "RMS $13''$, lớn nhất $34''$", en: "RMS $13''$, max $34''$" } },
   { code: 'A3', what: { vi: 'Thời điểm trăng non, trăng tròn và hai pha bán nguyệt (1 533 pha)', en: 'Times of new, full and quarter moons (1,533 phases)' }, ref: { vi: 'JPL Horizons DE441', en: 'JPL Horizons DE441' }, result: { vi: 'trung vị 3 s, lớn nhất 17 s', en: 'median 3 s, max 17 s' } },
-  { code: 'E1', what: { vi: 'Vị trí nhật tâm của Sao Thuỷ, 1980–2050 (góc lệch)', en: 'Heliocentric position of Mercury, 1980–2050 (angular offset)' }, ref: { vi: 'JPL Horizons DE441', en: 'JPL Horizons DE441' }, result: { vi: "RMS $8''$", en: "RMS $8''$" } },
+  { code: 'E1', what: { vi: 'Vị trí nhật tâm của tám hành tinh theo VSOP87, 1800–2200 (sai số góc lớn nhất)', en: 'Heliocentric positions of the eight planets from VSOP87, 1800–2200 (maximum angular error)' }, ref: { vi: 'JPL Horizons DE441', en: 'JPL Horizons DE441' }, result: { vi: "$\le 1{,}2''$ (Sao Hải Vương $4{,}4''$)", en: "$\le 1.2''$ (Neptune $4.4''$)" } },
+  { code: 'E1', what: { vi: 'Vị trí Mặt Trăng và 16 vệ tinh khác, nhìn từ hành tinh mẹ, 1900–2100', en: 'Position of the Moon and 16 other moons as seen from their planet, 1900–2100' }, ref: { vi: 'JPL Horizons', en: 'JPL Horizons' }, result: { vi: "Mặt Trăng $0{,}006^\circ$ (38 km); các vệ tinh khác $0{,}1$–$1{,}2^\circ$", en: "Moon $0.006^\circ$ (38 km); other moons $0.1$–$1.2^\circ$" } },
+  { code: 'E1', what: { vi: 'Nhật thực toàn phần 8/4/2024: điểm tối nhất so với điểm cực đại của NASA', en: 'Total eclipse of 8 April 2024: darkest point against NASA’s greatest-eclipse point' }, ref: { vi: 'NASA (Espenak)', en: 'NASA (Espenak)' }, result: { vi: "lệch $< 1^\circ$ trên Trái Đất", en: "within $1^\circ$ on the Earth" } },
   { code: 'B4', what: { vi: 'Năng lượng hệ Mặt Trời – Sao Mộc – Sao Thổ sau 1 000 năm (Yoshida bậc 4)', en: 'Sun–Jupiter–Saturn energy after 1,000 years (4th-order Yoshida)' }, ref: { vi: 'Bảo toàn năng lượng', en: 'Energy conservation' }, result: { vi: '$|\\Delta E/E| = 2{,}3\\times10^{-11}$', en: '$|\\Delta E/E| = 2.3\\times10^{-11}$' } },
   { code: 'D2', what: { vi: 'Tiến động cận điểm từ tích phân đường trắc địa (6 quỹ đạo, tới $e = 0{,}6$)', en: 'Periapsis advance from geodesic integration (6 orbits, up to $e = 0.6$)' }, ref: { vi: 'Nghiệm chính xác qua tích phân elliptic', en: 'Exact elliptic-integral solution' }, result: { vi: 'sai lệch tương đối $\\le 5{,}4\\times10^{-11}$', en: 'relative error $\\le 5.4\\times10^{-11}$' } },
   { code: 'D3', what: { vi: 'Bán kính góc của bóng hố đen do shader dò tia tính', en: 'Angular radius of the black-hole shadow from the ray-tracing shader' }, ref: { vi: 'Công thức Synge (1966)', en: 'Synge (1966) formula' }, result: { vi: 'sai lệch tương đối $\\le 2{,}8\\times10^{-5}$', en: 'relative error $\\le 2.8\\times10^{-5}$' } },
@@ -66,6 +69,8 @@ const HIGHLIGHTS: { code: string; what: L; ref: L; result: L }[] = [
 const SOURCES: { name: ReactNode; text: L }[] = [
   { name: <>JPL Horizons (DE441)</>, text: { vi: 'lịch thiên văn chuẩn dùng làm giá trị tham chiếu cho Mặt Trời, Mặt Trăng và tám hành tinh trong các báo cáo kiểm chứng A1, A3 và E1.', en: 'the reference ephemeris for the Sun, Moon and eight planets in the A1, A3 and E1 validation reports.' } },
   { name: <>E. M. Standish, <i>Keplerian Elements for Approximate Positions of the Major Planets</i> (JPL)</>, text: { vi: 'phần tử quỹ đạo gần đúng của các hành tinh, hiệu lực 1800–2050.', en: 'approximate planetary orbital elements, valid 1800–2050.' } },
+  { name: <>Bretagnon &amp; Francou (1988), <i>VSOP87</i>, A&amp;A 202, 309</>, text: { vi: 'chuỗi lượng giác cho vị trí tám hành tinh trong E1 (bản rút gọn từ Celestia).', en: 'trigonometric series for the positions of the eight planets in E1 (truncated version from Celestia).' } },
+  { name: <>IAU WGCCRE (Archinal et al. 2018), <i>Report on Cartographic Coordinates and Rotational Elements</i></>, text: { vi: 'hướng cực quay và pha quay của hành tinh và vệ tinh trong E1.', en: 'spin-axis directions and rotation phases of the planets and moons in E1.' } },
   { name: <>J. Meeus, <i>Astronomical Algorithms</i>, 2nd ed. (Willmann-Bell, 1998)</>, text: { vi: 'thuật toán vị trí Mặt Trời, pha Mặt Trăng, thời gian sao và khúc xạ khí quyển.', en: 'algorithms for the Sun’s position, lunar phases, sidereal time and atmospheric refraction.' } },
   { name: <><i>The Astronomical Almanac</i></>, text: { vi: 'chuỗi lượng giác độ chính xác thấp cho vị trí Mặt Trăng.', en: 'low-precision trigonometric series for the Moon’s position.' } },
   { name: <>D. Hoffleit &amp; W. H. Warren, <i>The Bright Star Catalogue</i>, 5th ed. (1991)</>, text: { vi: 'toạ độ J2000, cấp sao V và chỉ số màu B−V của các sao sáng.', en: 'J2000 coordinates, V magnitudes and B−V colours of bright stars.' } },
@@ -183,8 +188,8 @@ export function About() {
         <table>
           <thead><tr><th>{tx({ vi: 'Mã', en: 'Code' })}</th><th>{tx({ vi: 'Đại lượng kiểm chứng', en: 'Quantity checked' })}</th><th>{tx({ vi: 'Tham chiếu', en: 'Reference' })}</th><th>{tx({ vi: 'Sai lệch / kết quả', en: 'Deviation / result' })}</th></tr></thead>
           <tbody>
-            {HIGHLIGHTS.filter((h) => MODULES.some((m) => m.code === h.code)).map((h) => (
-              <tr key={h.code}>
+            {HIGHLIGHTS.filter((h) => MODULES.some((m) => m.code === h.code)).map((h, i) => (
+              <tr key={`${h.code}-${i}`}>
                 <td><a href={`#/m/${h.code.toLowerCase()}`} className="about-code">{h.code}</a></td>
                 <td><MathText text={tx(h.what)} /></td>
                 <td><MathText text={tx(h.ref)} /></td>
@@ -229,6 +234,9 @@ export function About() {
         <li><strong><a href="https://github.com/MinhMPA/lss-lab" target="_blank" rel="noopener">lss-lab</a></strong> - {lang === 'vi'
           ? <>dự án do <strong>TS. Nguyễn Nhật Minh</strong>, Trưởng nhóm nghiên cứu Vật lý Thiên văn và Vũ trụ học tại <strong>Trung tâm Quốc tế Khoa học và Giáo dục Liên ngành (ICISE), Quy Nhơn</strong>, đồng thời là đồng nghiên cứu viên tại <strong>Viện Kavli Vật lý và Toán học của Vũ trụ (Kavli IPMU), Đại học Tokyo</strong>, phát triển. Một số mô-đun thuộc nhóm F của USAC SimLab được phát triển dựa trên bộ công cụ này. Trong quá trình tích hợp, nhóm xây dựng lại giao diện và chuyển phần tính toán vật lý vào lõi có kiểm thử. Nguồn gốc và những thay đổi của từng mô-đun được ghi rõ trong Model Card tương ứng.</>
           : <>a project developed by <strong>Dr. Nguyen Nhat Minh</strong>, head of the Astrophysics and Cosmology research group at the <strong>International Centre for Interdisciplinary Science and Education (ICISE), Quy Nhon</strong>, and associate researcher at the <strong>Kavli Institute for the Physics and Mathematics of the Universe (Kavli IPMU), University of Tokyo</strong>. Several F-group modules of USAC SimLab are developed from this toolkit. During integration the team rebuilt the interface and moved the physics into the tested core. The origin of each module and the changes made are stated in its Model Card.</>}</li>
+        <li><strong><a href="https://celestiaproject.space" target="_blank" rel="noopener">Celestia</a></strong> - {lang === 'vi'
+          ? <>phần mềm mô phỏng không gian thời gian thực mã nguồn mở của <strong>Celestia Development Team</strong> (giấy phép GNU GPL phiên bản 2 hoặc mới hơn). Mô-đun E1 dùng mã phái sinh từ Celestia: chuỗi VSOP87, các lý thuyết vệ tinh, mô hình quay IAU và cách chiếu sáng, được chuyển sang TypeScript và GLSL rồi kiểm chứng lại với JPL Horizons. Vì vậy USAC SimLab cũng phát hành theo GPL-2.0-or-later; chi tiết các tệp phái sinh và thay đổi nằm trong <a href={`${SOURCE_URL}/blob/main/NOTICE.md`} target="_blank" rel="noopener">NOTICE.md</a>.</>
+          : <>the open-source real-time space simulator by the <strong>Celestia Development Team</strong> (GNU GPL version 2 or later). Module E1 uses code derived from Celestia: the VSOP87 series, the satellite theories, the IAU rotation models and the lighting model, ported to TypeScript and GLSL and re-validated against JPL Horizons. USAC SimLab is therefore also released under GPL-2.0-or-later; the derived files and the changes are listed in <a href={`${SOURCE_URL}/blob/main/NOTICE.md`} target="_blank" rel="noopener">NOTICE.md</a>.</>}</li>
         <li><strong>Solar System Scope</strong> - {tx({ vi: 'nguồn tài nguyên mô hình 3D về Mặt Trời, các hành tinh và Mặt Trăng được sử dụng trong dự án theo giấy phép CC BY 4.0.', en: '3D model resources of the Sun, planets and Moon, used in the project under the CC BY 4.0 licence.' })}</li>
         <li><strong>{tx({ vi: 'Các phần mềm mã nguồn mở', en: 'Open-source software' })}</strong> - {tx({ vi: 'USAC SimLab sử dụng React, three.js, React Three Fiber, KaTeX, Vite và Vitest trong quá trình xây dựng giao diện, đồ họa, hiển thị công thức và kiểm thử phần mềm.', en: 'USAC SimLab uses React, three.js, React Three Fiber, KaTeX, Vite and Vitest for its interface, graphics, formula rendering and software testing.' })}</li>
       </ul>

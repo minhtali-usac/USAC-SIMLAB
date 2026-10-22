@@ -2,6 +2,7 @@
   "name": "@usac/sim-core",
   "version": "0.1.0",
   "private": true,
+  "license": "GPL-2.0-or-later",
   "type": "module",
   "description": "Pure physics core of USAC SimLab — no React/Three dependencies, float64 only.",
   "main": "src/index.ts",
