@@ -1,125 +1,197 @@
+<div align="center">
+
+<img src="usac-logo.png" alt="CLB Thiên văn USAC" width="96">
+
 # USAC SimLab
 
-**USAC Astronomy Simulation Laboratory**: phòng thí nghiệm thiên văn ảo. Người học có thể chơi như một trò chơi, nhưng nội dung chính xác như một giáo trình.
+### Phòng thí nghiệm thiên văn ảo
 
-Nền tảng web mở để học thiên văn học và vật lý thiên thể qua mô phỏng tương tác. Hệ thống lấy cảm hứng sư phạm từ NAAP, dùng dữ liệu thật, có phương trình kèm trích dẫn và ghi rõ sai số. Định hướng đầy đủ nằm trong [docs/BRIEF.md](docs/BRIEF.md).
+**Trực quan như một trò chơi, vững vàng về kiến thức khoa học.**<br>
+Từ chuyển động của Mặt Trời đến những hố đen bí ẩn, mỗi mô phỏng giúp bạn khám phá vũ trụ qua dữ liệu, phương trình vật lý và những giới hạn được trình bày rõ ràng.
 
-## Chạy thử
+[**Dùng thử trực tuyến**](https://usac-simlab.clbtvusac.com/) · [Hệ Mặt Trời 3D](https://usac-simlab.clbtvusac.com/#/m/e1) · [Tiếng Anh](README.en.md) · [Báo cáo kiểm chứng](docs/validation)
 
-Yêu cầu Node.js ≥ 20.
+![Giấy phép](https://img.shields.io/badge/giấy%20phép-GPL--2.0--or--later-blue)
+![Mô phỏng](https://img.shields.io/badge/mô%20phỏng-21-orange)
+![Kiểm thử](https://img.shields.io/badge/kiểm%20thử-339%20đạt-brightgreen)
+![Báo cáo kiểm chứng](https://img.shields.io/badge/báo%20cáo%20kiểm%20chứng-19-brightgreen)
+![Ngôn ngữ](https://img.shields.io/badge/ngôn%20ngữ-Việt%20%C2%B7%20Anh-lightgrey)
+[![CI](https://github.com/minhtali-usac/USAC-SIMLAB/actions/workflows/ci.yml/badge.svg)](https://github.com/minhtali-usac/USAC-SIMLAB/actions/workflows/ci.yml)
 
-```bash
-npm install
-npm run dev        # mở http://localhost:5173
-npm test           # 247 test vật lý đối chiếu giá trị tham chiếu
-npm run typecheck  # TypeScript strict cho lõi và web
-npm run build      # bản tĩnh trong apps/web/dist (triển khai lên bất kỳ host tĩnh nào)
-npm run validate:moon   # báo cáo sai số A3 so với JPL Horizons → docs/validation/A3-moon.json
-npm run validate:exo    # báo cáo kiểm định A4 → docs/validation/A4-exoplanets.json
-npm run validate:kepler # B1: phần dư Kepler/Barker, bảo toàn, định luật II–III, preset JPL/SBDB → docs/validation/B1-kepler.json
-npm run validate:transfer # B2: Hohmann, ngày pha, bi-elliptic, Lambert (Curtis 5.2), C₃ cơ hội 2026 → docs/validation/B2-transfer.json
-npm run validate:cr3bp  # B3: điểm Lagrange, C tới hạn, ổn định, giữ cân bằng, hội tụ DOPRI5/RK4 → docs/validation/B3-cr3bp.json
-npm run validate:var    # A5: GLS so với nghiệm dạng đóng, khôi phục chu kỳ, khoảng cách δ Cep → docs/validation/A5-variable.json
-npm run validate:hz     # A6: biên Kopparapu 2014 cho Mặt Trời, T_eq Trái Đất → docs/validation/A6-habitable.json
-npm run validate:shadow # D3: rìa bóng của shader (port float32) so với góc Synge → docs/validation/D3-shadow.json
-npm run validate:ephem  # A1 + E1: Mặt Trời, mọc/lặn, 8 hành tinh so với JPL Horizons DE441 → docs/validation/A1-sun.json, E1-planets.json
-npm run validate:nbody  # B4: bậc hội tụ, hình số 8, năng lượng 1000 năm, bài toán Pythagoras (DOPRI5) → docs/validation/B4-nbody.json
-npm run validate:sr     # C1–C4: γ, khoảng bất biến, cộng vận tốc, cặp song sinh, muon, quang sai & Doppler → docs/validation/C-special-relativity.json
-npm run validate:gr     # D2: tiến động cận điểm số so với tích phân elliptic chính xác, Sao Thuỷ, ISCO → docs/validation/D2-geodesics.json
-npm run validate:lens   # D5: độ phóng đại bắn tia so với nghiệm giải tích, rìa Mặt Trời 1,751″ → docs/validation/D5-lensing.json
-npm run validate:cosmicweb # F6: tỉ số Kaiser, phổ P(k) từ hạt, danh mục quầng → docs/validation/F6-cosmic-web.json
-npm run validate:cosmology # D8: tuổi, a(t) so với nghiệm giải tích, Vụ Co Lớn, biên mặt phẳng Ωm-ΩΛ, mốc gia tốc → docs/validation/D8-cosmology.json
-npm run validate:sn     # F8: μ(z) nhanh so với tích phân thích nghi, khớp Union2.1, độ phủ vùng 68% trên dữ liệu giả lập → docs/validation/F8-sn-inference.json
-npm run validate        # chạy tất cả các báo cáo trên
-```
+<img src="docs/images/e1-jupiter.jpg" alt="Hệ sao Mộc và bốn vệ tinh Galilê trong mô-đun E1" width="88%">
 
-Dữ liệu tham chiếu được tải lại bằng `node reference/fetch_horizons_moon.mjs`, `node reference/fetch_exoplanet_archive.mjs`, `node reference/fetch_horizons_planets_sun.mjs packages/sim-core/test/fixtures` và `node reference/fetch_horizons_sun_riseset.mjs packages/sim-core/test/fixtures`. Thông số hệ sao A6 lấy từ NASA Exoplanet Archive (`pscomppars`, truy vấn 2026-10-20) - xem `packages/sim-core/src/data/hzSystems.ts`.
+</div>
 
-## Các module đã có (25)
+---
 
-| Mã | Module | Mức | Điểm nổi bật |
+## USAC SimLab là gì
+
+USAC SimLab là nền tảng web mở của **CLB Thiên văn USAC** để học thiên văn học và vật lý thiên thể qua mô phỏng tương tác. Mọi thứ chạy ngay trong trình duyệt: không cần đăng nhập, không cần cài đặt, dùng được ngoại tuyến và trên điện thoại.
+
+Điểm khác biệt là chúng tôi **không chỉ minh hoạ**. Mỗi mô phỏng được xây trên dữ liệu thật và phương trình có trích dẫn, so với nguồn tham chiếu độc lập như JPL Horizons, và **công bố sai số đo được** ngay trong giao diện. Nếu một phần chỉ mang tính minh hoạ, nó được gắn nhãn là minh hoạ.
+
+<table>
+<tr>
+<td width="25%" valign="top">
+
+**🎮 Trực quan**<br>
+Kéo, xoay, đổi tham số và thấy kết quả ngay. Mỗi mô-đun có bài học, hoạt động "Hãy thử" và câu hỏi kiểm tra.
+
+</td>
+<td width="25%" valign="top">
+
+**📐 Chính xác**<br>
+Vật lý chạy bằng số thực 64 bit trong một lõi riêng, có 288 phép kiểm thử đối chiếu nghiệm giải tích, định luật bảo toàn và dữ liệu tham chiếu.
+
+</td>
+<td width="25%" valign="top">
+
+**🔍 Minh bạch**<br>
+19 báo cáo kiểm chứng tái lập bằng một lệnh. Model Card của từng mô-đun ghi phương trình, giả định, miền hợp lệ, sai số và giới hạn.
+
+</td>
+<td width="25%" valign="top">
+
+**🌏 Mở**<br>
+Song ngữ Việt - Anh. Mã nguồn tự do theo GNU GPL, trạng thái mô phỏng nằm trong URL nên chia sẻ được bằng liên kết.
+
+</td>
+</tr>
+</table>
+
+## Xem nhanh
+
+<table>
+<tr>
+<td width="50%"><img src="docs/images/e1-saturn.jpg" alt="Sao Thổ và vành đai, bóng của hành tinh trên vành đai"><br><sub><b>E1 · Hệ Mặt Trời 3D.</b> Sao Thổ mùa vành đai mở rộng (15/9/2017): bóng của hành tinh đổ lên vành đai, lục giác ở cực bắc.</sub></td>
+<td width="50%"><img src="docs/images/e1-earth.jpg" alt="Trái Đất với mây, khí quyển và đèn thành phố"><br><sub><b>E1 · Trái Đất.</b> Lớp mây, viền khí quyển tán xạ, vùng chạng vạng mềm và đèn thành phố bên phần đêm.</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/images/d3-blackhole.jpg" alt="Hố đen Schwarzschild dò tia thời gian thực"><br><sub><b>D3 · Hố đen Schwarzschild.</b> Dò tia trên GPU theo thời gian thực; rìa bóng lệch không quá 0,003% so với công thức giải tích của Synge.</sub></td>
+<td width="50%"><img src="docs/images/b2-transfer.jpg" alt="Bản đồ porkchop chuyển quỹ đạo tới Sao Hoả"><br><sub><b>B2 · Chuyển quỹ đạo tới Sao Hoả.</b> Hohmann, ngày pha theo lịch thiên văn và bài toán Lambert với bản đồ porkchop.</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/images/a3-moon.jpg" alt="Các pha Mặt Trăng"><br><sub><b>A3 · Các pha Mặt Trăng.</b> Ba góc nhìn đồng bộ theo ngày thật; thời điểm các pha chính lệch không quá 0,3 phút so với JPL Horizons.</sub></td>
+<td width="50%"><img src="docs/images/home.jpg" alt="Trang chủ USAC SimLab"><br><sub><b>Trang chủ.</b> 21 mô phỏng trong sáu nhóm, ba cấp độ Khám phá, Học tập, Chuyên sâu.</sub></td>
+</tr>
+</table>
+
+## Nổi bật: Hệ Mặt Trời 3D (E1)
+
+Mô-đun E1 vừa được xây lại, tích hợp các thành phần của [Celestia](https://celestiaproject.space), phần mềm mô phỏng không gian mã nguồn mở nổi tiếng, rồi **tuỳ biến, Việt hoá và đo lại độ chính xác** cho hệ thống này.
+
+| | Trước | Bây giờ |
+|---|---|---|
+| **Hành tinh** | Phần tử Kepler gần đúng, sai số tới 9′ | Chuỗi **VSOP87**, sai số **≤ 1,2″** (Sao Thiên Vương 2,2″, Sao Hải Vương 4,4″) trong 1800–2200 |
+| **Vệ tinh** | Không có | **17 vệ tinh**: Mặt Trăng (lệch tối đa **38 km**), bốn vệ tinh Galilê, bảy vệ tinh của Sao Thổ, bốn của Sao Thiên Vương và Triton |
+| **Trục quay** | Độ nghiêng trung bình | **Cực quay và pha quay theo IAU** cho từng thiên thể; độ nghiêng khớp bảng NASA trong 0,6° |
+| **Hình ảnh** | Chiếu sáng Lambert | Mô hình ánh sáng của Celestia, bóng nhật/nguyệt thực, bóng vành đai, khí quyển tán xạ, đèn thành phố, sao dạng PSF, quỹ đạo mờ dần |
+| **Thời gian** | Theo ngày | Theo giờ, đảo chiều thời gian, từ 1 phút/giây đến 10 năm/giây, ±3000 năm |
+
+Bóng được tính bằng **km thật** ở từng điểm ảnh nên rơi đúng chỗ dù hình vẽ phóng đại. Toàn bộ chuỗi tính (VSOP87, lý thuyết Mặt Trăng, quay của Trái Đất, hình học bóng) được thử với hai lần nhật thực có thật: điểm tối nhất của nhật thực toàn phần **8/4/2024** cách điểm cực đại của NASA chưa tới 1°, và nhật thực vành khuyên **14/10/2023** còn lại 9,2% ánh sáng, khớp 9,4% tính từ tỉ lệ đường kính.
+
+Một chi tiết nhỏ cho thấy cách chúng tôi làm việc: khi đo, chúng tôi phát hiện chuỗi "Trái Đất" của VSOP87 cho **tâm Trái Đất** chứ không phải khối tâm Trái Đất-Mặt Trăng (lệch 6,9″, tương ứng 4 700 km), nên sửa lại và ghi vào Model Card. Chúng tôi cũng **không đưa vào** những vệ tinh mà lý thuyết có sẵn chưa đủ tốt (Phobos và Deimos lệch 4-22°, Miranda lệch 9°, Hyperion lệch 1,8°), thay vì vẽ chúng như thể chính xác. Mọi sai số đo được nằm trong [docs/validation/E1-vsop87.json](docs/validation/E1-vsop87.json) và [E1-moons.json](docs/validation/E1-moons.json).
+
+## Các mô phỏng
+
+Sáu nhóm, 21 mô phỏng. Mức **A** là mô hình định lượng đã kiểm chứng, mức **B** là mô hình đơn giản hoá có ghi rõ phạm vi, mức **C** là minh hoạ (nhãn nội bộ của USAC SimLab).
+
+| Mã | Mô phỏng | Mức | Điểm nổi bật |
 |---|---|---|---|
 | A1 | Chuyển động của Mặt Trời | A | Thiên cầu 3D tại vị trí và giờ thật; Mặt Trời lệch ≤ 34″ và giờ mọc/lặn ≤ 0,1 phút so với JPL Horizons; analemma, sao sáng thật |
-| A3 | Các pha Mặt Trăng | A | Ba góc nhìn đồng bộ theo ngày thật, ngày trăng non/tròn kế tiếp, gợi ý thực |
+| A3 | Các pha Mặt Trăng | A | Ba góc nhìn đồng bộ theo ngày thật, các pha sắp tới tính từ thời điểm đang xem, giờ pha chính ≤ 0,3 phút |
 | A4 | Săn ngoại hành tinh | A | Vận tốc xuyên tâm và quá cảnh có tối rìa, nhiễu đo, SNR |
-| A5 | Sao biến quang | B | Chu đồ GLS có trọng số, FAP bootstrap, cảnh báo alias, ⟨V⟩ trung bình cường độ, Leavitt + A_V (δ Cep 265 ± 5 pc so với 273 ± 11 pc) |
-| A6 | Vùng sinh sống được | A | Bốn biên Kopparapu 2014 (hệ số đối chiếu hzcalc.py), T_eq với suất phản chiếu Bond, hệ sao từ NASA Exoplanet Archive, không kẹp âm thầm |
-| B1 | Quỹ đạo Kepler và bài toán hai vật | A | Elip/parabol/hyperbol với μ = G(M+m), chế độ quanh khối tâm, múi diện tích bằng thời gian lệch ≤ 4 × 10⁻¹¹, chu kỳ SBDB tái lập tới 2 × 10⁻¹⁰ |
-| B2 | Chuyển quỹ đạo và đường tới Sao Hoả | A | Ba lớp: Hohmann lý tưởng · ngày pha theo ephemeris · Lambert (v∞, C₃, bản đồ porkchop); ngưỡng bi-elliptic 11,94/15,58 tính số |
-| B3 | Bài toán ba vật hạn chế tròn và điểm Lagrange | B | CR3BP phẳng: điểm Lagrange (phần dư ≤ 10⁻¹⁵), trạng thái cổ chai L1–L3, khám phá mức Jacobi, ổn định tuyến tính từ trị riêng, kiểm tra hội tụ DOPRI5 và RK4 độc lập |
-| B4 | Sandbox N vật | B | Leapfrog, Yoshida-4, RK4, độ trôi năng lượng |
+| A5 | Sao biến quang | B | Chu đồ GLS có trọng số, FAP bootstrap, cảnh báo alias, Leavitt và hấp thụ (δ Cep 265 ± 5 pc so với 273 ± 11 pc) |
+| A6 | Vùng sinh sống được | A | Bốn biên Kopparapu 2014, nhiệt độ cân bằng với suất phản chiếu Bond, hệ sao từ NASA Exoplanet Archive |
+| B1 | Quỹ đạo Kepler và bài toán hai vật | A | Elip, parabol, hyperbol; múi diện tích bằng thời gian lệch ≤ 4 × 10⁻¹¹; chu kỳ SBDB tái lập tới 2 × 10⁻¹⁰ |
+| B2 | Chuyển quỹ đạo và đường tới Sao Hoả | A | Hohmann, ngày pha theo lịch thiên văn, Lambert (v∞, C₃, porkchop); ngưỡng bi-elliptic 11,94 và 15,58 tính số |
+| B3 | Bài toán ba vật hạn chế tròn | B | Điểm Lagrange (phần dư ≤ 10⁻¹⁵), mức Jacobi, ổn định tuyến tính, kiểm tra hội tụ DOPRI5 và RK4 độc lập |
+| B4 | Sandbox N vật | B | Leapfrog, Yoshida bậc 4, RK4, độ trôi năng lượng |
 | C1 | Đồng hồ ánh sáng và muon | A | Giãn thời gian nhìn từ hai hệ quy chiếu |
 | C2 | Biểu đồ Minkowski | A | Kéo sự kiện, đổi hệ bằng rapidity, nghịch lý sinh đôi |
 | C4 | Bay gần tốc độ ánh sáng | A | Quang sai và Doppler trên bầu trời sao thật |
-| D1 | Thời gian hấp dẫn và GPS | A | Đồng hồ trên geoid (IAU L_G): +38,58 μs/ngày = 4,4647 × 10⁻¹⁰, khớp Ashby (2003); Pound–Rebka |
-| D2 | Schwarzschild và Newton | B | Geodesic float64, thế hiệu dụng, ISCO, 43″/thế kỷ |
-| D3 | Hố đen Schwarzschild | B | Ray tracing GPU thời gian thực (rìa bóng lệch ≤ 0,003% so với Synge), đĩa Doppler, hai đồng hồ khi rơi vào |
+| D1 | Thời gian hấp dẫn và GPS | A | Đồng hồ trên geoid: +38,58 μs/ngày, khớp Ashby (2003); Pound-Rebka |
+| D2 | Schwarzschild và Newton | B | Đường trắc địa float64, thế hiệu dụng, ISCO, 43″/thế kỷ |
+| D3 | Hố đen Schwarzschild | B | Dò tia GPU thời gian thực, đĩa Doppler, hai đồng hồ khi rơi vào |
 | D5 | Thấu kính hấp dẫn | A | Dò tia ngược, vòng Einstein, microlensing |
 | D8 | Vũ trụ học FLRW | B | Planck 2018: tuổi 13,79 tỉ năm, a(t), các loại khoảng cách |
-| E1 | Hệ Mặt Trời 3D | A | Phần tử Kepler JPL 1800–2050; sai số đo được so với DE441: 21″ (Trái Đất) tới 9,3′ (Sao Thổ); kết cấu bề mặt thật (Solar System Scope) |
-| F1 | Sóng điện từ 3D | A | E ⟂ B ⟂ k theo vectơ Jones (thẳng, tròn, elip), toàn phổ 1 pm – 1 km, nguồn thật (21 cm, Hα, Cu Kα, 511 keV), I = ½cε₀E₀² |
-| F2 | Âm thanh và ánh sáng | A | v = √(γRT/M) theo khí và nhiệt độ, nước/thép đo, ánh sáng c/n, chân không tắt sóng âm, đua sét – sấm thời gian thực |
-| F3 | Tốc độ ánh sáng: một chuyến đi thật | A | Tia sáng tới Mặt Trăng, hành tinh (khoảng cách hôm nay theo ephemeris), Proxima, tâm Ngân Hà, Andromeda; trễ tín hiệu tới các hành tinh |
-| F4 | Nhìn xa là nhìn về quá khứ | A | Thời gian nhìn lại và bốn loại khoảng cách từ Friedmann (Planck 2018); 100θ* khớp Planck trong 0,2%; quạt khảo sát với mạng lưới thật |
-| F5 | Hấp dẫn và giãn nở vũ trụ | B | D(a), f(a) giải số (EdS, ΛCDM), xấp xỉ Zel’dovich trên phổ EH98 chuẩn σ₈, mật độ CIC |
-| F6 | Sandbox mạng lưới vũ trụ 3D | B | 262 144 hạt 1LPT/2LPT trên GPU, Ω_m/σ₈/n_s, RSD (Kaiser ±3,5%), quầng đỉnh Lagrange, thiên hà HOD, P(k) đo trực tiếp, Web Worker |
-| F8 | Suy luận tham số từ siêu tân tinh | A | 580 SN Ia thật (Union2.1), χ² lấy biên độ lệch, vùng 68/95/99,7%, MCMC Metropolis; Ω_m phẳng = 0,278 (thống kê) |
+| **E1** | **Hệ Mặt Trời 3D** | **A** | **VSOP87, 17 vệ tinh, trục quay IAU, ánh sáng và bóng kiểu Celestia (xem phần trên)** |
+| F1 | Sóng điện từ 3D | A | Phân cực thẳng, tròn, elip theo vectơ Jones; toàn phổ 1 pm đến 1 km; nguồn thật (21 cm, Hα, Cu Kα, 511 keV) |
+| F2 | Âm thanh và ánh sáng | A | Tốc độ âm theo khí và nhiệt độ, ánh sáng c/n, đua sét - sấm thời gian thực |
+| F3 | Tốc độ ánh sáng: một chuyến đi thật | A | Tia sáng tới Mặt Trăng, hành tinh, Proxima, tâm Ngân Hà, Andromeda với khoảng cách hôm nay |
 
-Các module trong lộ trình (B5, C3, C5, D4, D7, E2, E3) đã có mặt trên trang chủ với nhãn "Sắp ra mắt".
+Mỗi mô phỏng đều có **ba cấp độ** (Khám phá, Học tập, Chuyên sâu), **Model Card** (nút ⓘ), **bài học** có KaTeX, chia sẻ bằng liên kết (ví dụ `#/m/e1?sel=jupiter&date=2026-10-22`), chụp ảnh, toàn màn hình và phím tắt `Space`, `R`, `L`, `I`.
 
-## Tính năng chung
+## Cách tổ chức và vì sao tin được
 
-Mỗi module dùng cùng một bộ khung theo brief (mục 3, 8 và 10):
-
-- **Chuyển cấp độ** Khám phá, Học tập, Chuyên sâu ngay trên cùng một mô phỏng. Ở cấp Chuyên sâu có thêm sai số số trị và nút xuất CSV.
-- **Model Card** (nút ⓘ) cho từng module, ghi phương trình, giả định, miền hợp lệ, sai số, kiểm chứng, giới hạn và tài liệu tham khảo.
-- **Nhãn độ trung thực** A, B, C đặt trên từng phần của mô phỏng.
-- **Bài học** gồm giới thiệu, trang nền tảng (có KaTeX), hoạt động "Hãy thử" tự đặt tham số, câu hỏi kiểm tra và phiếu in.
-- **Chia sẻ bằng link**: mọi tham số nằm trong URL, ví dụ `#/m/d2?p=12&e=0.6`.
-- **Các nút tiện ích** chụp ảnh PNG, toàn màn hình, đặt lại, cùng phím tắt `Space`, `R`, `L` và `I`.
-- **Giao diện** tối theo mặc định, có chế độ sáng cho lớp học và in ấn. Bản điện thoại dùng bố cục một cột.
-- **Ngôn ngữ** tiếng Việt và tiếng Anh.
-- **Ngoại tuyến** qua PWA.
-
-## Cấu trúc
-
-```
-packages/sim-core/   Vật lý thuần (float64, không phụ thuộc React/Three), có test
-  src/units          Hằng số có nguồn (CODATA 2018, IAU 2012/2015, DE430)
-  src/time           Julian Date, GMST
-  src/celestial      Mặt Trời (Meeus), Mặt Trăng (Almanac), hành tinh (JPL), toạ độ
-  src/orbits         Kepler, Hohmann, CR3BP, N vật
-  src/relativity-sr  Lorentz, Doppler, quang sai
-  src/relativity-gr  Schwarzschild, thấu kính, GPS, Kerr (bán kính đặc trưng)
-  src/cosmology      Friedmann, khoảng cách, EH98/LPT/HOD (cấu trúc lớn), suy luận SN Ia, hình dạng thiên hà
-  src/waves          Sóng điện từ, tốc độ âm
-  src/stellar        Vật đen, vùng sinh sống
-  src/exoplanets     RV, quá cảnh
-  src/photometry     Lomb–Scargle, Leavitt
-  test/              247 test đối chiếu giá trị tham chiếu
-apps/web/            Vite + React + TypeScript + Three.js (React Three Fiber)
-  src/modules/<id>/  Mỗi module là một thư mục, tải lười (lazy load)
-reference/           Script Python sinh golden vectors (astropy, einsteinpy)
-docs/                BRIEF.md, AGENTS.md
+```mermaid
+flowchart LR
+    subgraph core["packages/sim-core  -  vật lý thuần, float64, có test"]
+      A["lịch thiên văn<br/>VSOP87 · vệ tinh · quay IAU"]
+      B["quỹ đạo, tương đối tính,<br/>vũ trụ học, sóng, sao"]
+    end
+    H[("JPL Horizons<br/>dữ liệu tham chiếu")] -. đối chiếu .-> core
+    core --> W["apps/web  -  React + three.js<br/>chỉ đọc kết quả và vẽ"]
+    W --> U["trình duyệt<br/>PWA, song ngữ, chia sẻ bằng URL"]
+    core --> R["docs/validation<br/>19 báo cáo sai số tái lập được"]
 ```
 
-## Nguyên tắc khoa học
+- **Vật lý chỉ nằm trong `packages/sim-core`**: hàm thuần, số thực 64 bit, chạy được trên Node, không phụ thuộc giao diện. Shader GPU chỉ dùng để vẽ, không phải nguồn của con số hiển thị.
+- **Mỗi hằng số và công thức đều kèm nguồn.** Chỗ nào chưa chắc, mã ghi `TODO: cần xác minh` thay vì đoán.
+- **Kiểm chứng độc lập**: số liệu so với JPL Horizons, nghiệm giải tích, định luật bảo toàn. Chạy `npm run validate` để tạo lại toàn bộ báo cáo; các con số trong Model Card lấy từ chính những báo cáo này.
+- **Không lẫn mức trung thực**: hình minh hoạ (mức C) không bao giờ được trình bày như mô hình chính xác.
+- **Mọi tham số nằm trong URL**, nên một liên kết khôi phục đúng trạng thái.
 
-Đọc [docs/AGENTS.md](docs/AGENTS.md) trước khi sửa code. Tóm tắt các nguyên tắc chính:
+```
+packages/sim-core/   Vật lý thuần, có test và script kiểm chứng
+  src/ephemeris      VSOP87, vệ tinh, quay IAU, trạng thái hệ Mặt Trời (E1)
+  src/celestial      Mặt Trời, Mặt Trăng, hành tinh Kepler, nhật/nguyệt thực, toạ độ
+  src/orbits         Kepler, Hohmann, Lambert, CR3BP, N vật
+  src/relativity-*   Tương đối hẹp và rộng, thấu kính, GPS
+  src/cosmology      Friedmann, khoảng cách, siêu tân tinh
+  test/              288 test và dữ liệu tham chiếu (test/fixtures)
+apps/web/            Vite + React + TypeScript + three.js (React Three Fiber)
+  src/modules/<id>/  Mỗi mô phỏng là một thư mục, tải lười
+reference/           Script lấy dữ liệu Horizons và chuyển mã từ Celestia
+docs/                BRIEF.md (định hướng), AGENTS.md (quy ước), validation/ (báo cáo sai số)
+```
 
-- Mọi phép tính định lượng nằm trong `sim-core` và dùng float64. Shader GPU chỉ dùng để kết xuất hình.
-- Mỗi hằng số và mỗi công thức phải kèm nguồn. Chỗ nào chưa chắc thì ghi `TODO: cần xác minh`.
-- Không trình bày hình minh hoạ (Mức C) như thể đó là mô hình chính xác.
+## Chạy trên máy của bạn
 
-## Ghi công
+Yêu cầu Node.js 24 (phiên bản CI dùng).
 
-Cấu trúc sư phạm lấy cảm hứng từ NAAP (Nebraska Astronomy Applet Project, University of Nebraska–Lincoln). Dự án không sao chép mã, hình ảnh hay văn bản nào của NAAP. Danh sách nguồn dữ liệu nằm trong [CREDITS.md](CREDITS.md).
+```bash
+npm install
+npm run dev          # mở http://localhost:5173
+npm test             # 339 test (288 vật lý + 51 giao diện)
+npm run typecheck    # TypeScript strict cho lõi và web
+npm run build        # bản tĩnh trong apps/web/dist, triển khai lên bất kỳ host tĩnh nào
+npm run validate     # tạo lại mọi báo cáo kiểm chứng trong docs/validation
+npm run validate:e1  # riêng báo cáo của Hệ Mặt Trời 3D (VSOP87 và vệ tinh)
+```
 
-## Việc cần chốt (brief mục 16)
+Dữ liệu tham chiếu dùng để đối chiếu được tải bằng các script trong `reference/`, ví dụ `node reference/fetch_horizons_moons.mjs packages/sim-core/test/fixtures`. Dự án tự triển khai lên GitHub Pages qua [GitHub Actions](.github/workflows/deploy.yml).
 
-Các quyết định sau đang chờ chủ dự án:
+## Đóng góp
 
-- Giấy phép mã và nội dung.
-- Có cần tài khoản hoặc chế độ lớp học hay không.
-- Chọn người có chuyên môn để rà soát khoa học (tiêu chí nghiệm thu, mục 13).
-- Đối chiếu lại các giá trị đang gắn `TODO: cần xác minh`: hệ số Kopparapu và thông số ngoại hành tinh làm tròn.
+Đọc [docs/AGENTS.md](docs/AGENTS.md) trước khi sửa mã. Ba điều cần nhớ:
+
+1. Vật lý viết trong `sim-core` kèm test và trích dẫn; giao diện chỉ vẽ.
+2. Chuỗi hiển thị phải có cả tiếng Việt và tiếng Anh, tham số mô phỏng phải nằm trong URL.
+3. Chạy `npm test` và `npm run typecheck` trước khi gửi.
+
+Một mô-đun chỉ được coi là xong khi đạt các tiêu chí ở mục 4 của AGENTS.md, gồm Model Card đầy đủ và nhãn A/B/C. Định hướng sản phẩm nằm trong [docs/BRIEF.md](docs/BRIEF.md).
+
+## Giấy phép và ghi công
+
+**USAC SimLab là phần mềm tự do theo GNU GPL phiên bản 2 hoặc (tuỳ chọn) mới hơn** ([LICENSE](LICENSE)). Mô-đun E1 chứa mã phái sinh từ **[Celestia](https://celestiaproject.space)** (Bản quyền (C) 2001-nay, Celestia Development Team, cũng theo GPL v2 trở lên): các bảng VSOP87, lý thuyết vệ tinh, mô hình quay IAU và cách chiếu sáng được chuyển sang TypeScript và GLSL, tuỳ biến và kiểm chứng lại. Danh sách tệp phái sinh, các thay đổi và ngày thay đổi nằm trong [NOTICE.md](NOTICE.md).
+
+Một số thành phần giữ giấy phép riêng và được ghi trong [CREDITS.md](CREDITS.md): texture hành tinh của Solar System Scope (CC BY 4.0, dựa trên dữ liệu NASA), ảnh toàn cảnh Ngân Hà của ESO (CC BY 4.0), ảnh trên thẻ module từ Wikimedia Commons, phông chữ theo SIL OFL.
+
+Cấu trúc sư phạm lấy cảm hứng từ **NAAP** (Nebraska Astronomy Applet Project, University of Nebraska-Lincoln); dự án không sao chép mã, hình ảnh hay văn bản nào của NAAP. Các mô-đun F1 đến F3 phát triển từ bộ công cụ [lss-lab](https://github.com/MinhMPA/lss-lab) của TS. Nguyễn Nhật Minh (ICISE Quy Nhơn; Kavli IPMU, Đại học Tokyo).
+
+## Liên hệ
+
+CLB Thiên văn USAC · [clb.usac@gmail.com](mailto:clb.usac@gmail.com) · [Fanpage](https://www.facebook.com/clbusac)
+
+<sub>Chương trình được phân phối với hy vọng hữu ích nhưng không có bất kỳ bảo đảm nào. Xem GNU GPL để biết chi tiết.</sub>
