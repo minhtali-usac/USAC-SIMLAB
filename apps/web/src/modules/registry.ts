@@ -80,7 +80,7 @@ export const MODULES: ModuleMeta[] = [
   // ── E · Extensions ──
   { id: 'e1', code: 'E1', group: 'E', fidelity: 'A', ready: true, load: () => import('./e1-solarsystem/index'),
     title: { vi: 'Hệ Mặt Trời 3D theo thời gian thực', en: 'Real-Time 3D Solar System' },
-    summary: { vi: 'Vị trí hành tinh theo ephemeris JPL cho bất kỳ ngày nào 1800–2050; tỉ lệ thật hoặc phóng đại, khoảng cách & thời gian ánh sáng.', en: 'Planet positions from JPL ephemerides for any date 1800–2050; true or exaggerated scale, distances & light time.' } },
+    summary: { vi: 'Tám hành tinh theo VSOP87 (sai số vài giây cung) và 17 vệ tinh lớn, hướng trục quay IAU, ánh sáng và bóng nhật/nguyệt thực kiểu Celestia; tỉ lệ thật hoặc phóng đại, kiểm chứng với JPL Horizons.', en: 'The eight planets from VSOP87 (arcsecond-level errors) and 17 major moons, IAU spin axes, Celestia-style lighting and eclipse shadows; true or exaggerated scale, checked against JPL Horizons.' } },
   { id: 'e2', code: 'E2', group: 'E', fidelity: 'A', ready: false,
     title: { vi: 'Thang khoảng cách vũ trụ', en: 'Cosmic Distance Ladder' },
     summary: { vi: 'Zoom logarithmic từ Trái Đất tới vũ trụ quan sát được.', en: 'Logarithmic zoom from Earth to the observable universe.' } },

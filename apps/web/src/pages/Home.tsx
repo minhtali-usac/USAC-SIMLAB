@@ -91,7 +91,7 @@ function HeroOrbit() {
 }
 
 /** Number of automated tests in `npm test` (update when tests are added). */
-export const PHYSICS_TESTS = 247;
+export const PHYSICS_TESTS = 288;
 
 export function Home() {
   const { t, tx } = useT();

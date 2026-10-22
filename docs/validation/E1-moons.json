@@ -1,0 +1,803 @@
+{
+  "generated": "2026-10-22T02:00:05.721Z",
+  "reference": "JPL Horizons, positions relative to the parent planet, ecliptic J2000, 1000 epochs 1900-2100",
+  "models": "Meeus ch. 47 (Moon), ch. 44 (Galilean), Dourneau/Meeus ch. 46 (Saturn), GUST86 (Uranus), Emelyanov & Samorodov 2015 (Triton), via Celestia 1.7.0",
+  "moons": [
+    {
+      "id": "moon",
+      "parent": "earth",
+      "meanRadiusKm": 384997.00165094464,
+      "maxKm": 37.51095940397191,
+      "rmsKm": 13.292898053102354,
+      "maxDeg": 0.005939535623965,
+      "rmsDeg": 0.0019832418178778485,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.004863314961046406
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.004791057401216687
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.005939535623965
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.005728881357604171
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.00581297847846075
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.005253442128655424
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.004874494130546195
+        }
+      ]
+    },
+    {
+      "id": "io",
+      "parent": "jupiter",
+      "meanRadiusKm": 421770.2932327222,
+      "maxKm": 1213.101001606357,
+      "rmsKm": 469.08062424647096,
+      "maxDeg": 0.16546519002632085,
+      "rmsDeg": 0.06372667305002888,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.059567709304949965
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.03601127661784936
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.03254203086504877
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.030667780443097658
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.08447406777090515
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.14099097601592206
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.16546519002632085
+        }
+      ]
+    },
+    {
+      "id": "europa",
+      "parent": "jupiter",
+      "meanRadiusKm": 671092.6862923014,
+      "maxKm": 1511.8162561729669,
+      "rmsKm": 525.1117723211369,
+      "maxDeg": 0.12794566447934555,
+      "rmsDeg": 0.04475958224598398,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.11109227716755252
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.10464336781339516
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.07014924090227936
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.06587778153370855
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.10962627748108202
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.12794566447934555
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.11187119918625008
+        }
+      ]
+    },
+    {
+      "id": "ganymede",
+      "parent": "jupiter",
+      "meanRadiusKm": 1070431.2102303929,
+      "maxKm": 3472.0814745297107,
+      "rmsKm": 1362.1676407429536,
+      "maxDeg": 0.1860870212313648,
+      "rmsDeg": 0.07293244901880544,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.05739710164438245
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.0531229435843912
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.03500948161246703
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.04867770918370902
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.11422477672425581
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.1616178194785625
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.1860870212313648
+        }
+      ]
+    },
+    {
+      "id": "callisto",
+      "parent": "jupiter",
+      "meanRadiusKm": 1882795.6163888464,
+      "maxKm": 3460.6979624953924,
+      "rmsKm": 1368.7643878750457,
+      "maxDeg": 0.10545213531349008,
+      "rmsDeg": 0.04165582167026251,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.0233428591866243
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.021997151032741174
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.022099472278725055
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.02312057637266486
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.04016838960365975
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.08592676979742786
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.10545213531349008
+        }
+      ]
+    },
+    {
+      "id": "mimas",
+      "parent": "saturn",
+      "meanRadiusKm": 185573.01836656404,
+      "maxKm": 2255.8270905280483,
+      "rmsKm": 972.2310323232995,
+      "maxDeg": 0.683283956070117,
+      "rmsDeg": 0.2986759447539993,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.4256023375862298
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.57326531033268
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.6118671630274131
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.6080678398415634
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.6193575887696394
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.5297234598010484
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.683283956070117
+        }
+      ]
+    },
+    {
+      "id": "enceladus",
+      "parent": "saturn",
+      "meanRadiusKm": 238040.06156160086,
+      "maxKm": 898.2650631236447,
+      "rmsKm": 380.8610622357501,
+      "maxDeg": 0.2162017427272368,
+      "rmsDeg": 0.09169007686963232,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.14437800502919956
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.10813159467004084
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.10821329758912479
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.13269285323034932
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.1682464847917806
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.19027806248301452
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.2162017427272368
+        }
+      ]
+    },
+    {
+      "id": "tethys",
+      "parent": "saturn",
+      "meanRadiusKm": 294673.2479103901,
+      "maxKm": 534.2440436469211,
+      "rmsKm": 298.3235226734843,
+      "maxDeg": 0.10386575720990623,
+      "rmsDeg": 0.05800463357658308,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.059051555828228984
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.09610252032884407
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.07356229694139835
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.0853511530668073
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.10386575720990623
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.07727414164076037
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.08912111034102048
+        }
+      ]
+    },
+    {
+      "id": "dione",
+      "parent": "saturn",
+      "meanRadiusKm": 377416.46687742346,
+      "maxKm": 720.804727999931,
+      "rmsKm": 491.7036579119842,
+      "maxDeg": 0.1092350955698719,
+      "rmsDeg": 0.07464797882829098,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.0877552971953094
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.09134198429542055
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.09721450827146472
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.09518327813889937
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.10563252134009564
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.09880404599405258
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.1092350955698719
+        }
+      ]
+    },
+    {
+      "id": "rhea",
+      "parent": "saturn",
+      "meanRadiusKm": 527068.2622731291,
+      "maxKm": 10006.218516928247,
+      "rmsKm": 7547.671693726856,
+      "maxDeg": 1.0879735151925054,
+      "rmsDeg": 0.8205251331714336,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 1.078793608540437
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 1.0848866658966654
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 1.0768622539857686
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 1.0879735151925054
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 1.07084865129404
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 1.063124051714426
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 1.041472250194455
+        }
+      ]
+    },
+    {
+      "id": "titan",
+      "parent": "saturn",
+      "meanRadiusKm": 1222336.6716616882,
+      "maxKm": 3422.7044858387835,
+      "rmsKm": 2561.492189263686,
+      "maxDeg": 0.16349516742540893,
+      "rmsDeg": 0.1208323591778523,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.12955797823832435
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.13755859435865395
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.14615160624385395
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.15039883578347005
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.15948198547906206
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.162951770094366
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.16349516742540893
+        }
+      ]
+    },
+    {
+      "id": "iapetus",
+      "parent": "saturn",
+      "meanRadiusKm": 3561975.548063855,
+      "maxKm": 21895.402029814722,
+      "rmsKm": 9037.803944538968,
+      "maxDeg": 0.3515062267246101,
+      "rmsDeg": 0.14548004068456852,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.12468025456705471
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.11428482927058214
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.12165988440384877
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.12198203539559326
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.17320682853502545
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.2781200519079577
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.3515062267246101
+        }
+      ]
+    },
+    {
+      "id": "ariel",
+      "parent": "uranus",
+      "meanRadiusKm": 190932.19666294582,
+      "maxKm": 2683.8268823825724,
+      "rmsKm": 1027.5910766437134,
+      "maxDeg": 0.8065102400574579,
+      "rmsDeg": 0.30841619000724096,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.43164322617727646
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.5422742354223893
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.6761583599631086
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.4233612331514655
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.3930287320813024
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.46147782071545096
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.8065102400574579
+        }
+      ]
+    },
+    {
+      "id": "umbriel",
+      "parent": "uranus",
+      "meanRadiusKm": 265983.40273941774,
+      "maxKm": 5529.34448331079,
+      "rmsKm": 2618.1093252592955,
+      "maxDeg": 1.1909334931746933,
+      "rmsDeg": 0.5638914916607073,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.8754383581888471
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 1.0827787588304563
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 1.0814774894815635
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.9717057333184018
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.6598037949718905
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.9433818437625434
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 1.1909334931746933
+        }
+      ]
+    },
+    {
+      "id": "titania",
+      "parent": "uranus",
+      "meanRadiusKm": 436281.22226086655,
+      "maxKm": 6123.263110005035,
+      "rmsKm": 2956.2492375903385,
+      "maxDeg": 0.8031359607984139,
+      "rmsDeg": 0.3881404886214797,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.8031359607984139
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.7900760470091349
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.7208354783121641
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.6735528862829283
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.6525874407878767
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.6841098616923469
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.7830264001386193
+        }
+      ]
+    },
+    {
+      "id": "oberon",
+      "parent": "uranus",
+      "meanRadiusKm": 583448.9920929304,
+      "maxKm": 7227.644829892916,
+      "rmsKm": 3219.1627685266167,
+      "maxDeg": 0.7087933656152173,
+      "rmsDeg": 0.316105774460254,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 0.6831608817565625
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 0.5788464354333716
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 0.3837366120947549
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 0.46439468410513723
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.6073873029658392
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.7051591377901407
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.7087933656152173
+        }
+      ]
+    },
+    {
+      "id": "triton",
+      "parent": "neptune",
+      "meanRadiusKm": 354759.0550442344,
+      "maxKm": 7117.320021484346,
+      "rmsKm": 5970.619931612677,
+      "maxDeg": 1.1496146843890078,
+      "rmsDeg": 0.9642919930314942,
+      "byInterval": [
+        {
+          "fromYear": 1900,
+          "toYear": 1930,
+          "maxDeg": 1.1496146843890078
+        },
+        {
+          "fromYear": 1930,
+          "toYear": 1960,
+          "maxDeg": 1.0994178598270457
+        },
+        {
+          "fromYear": 1960,
+          "toYear": 1990,
+          "maxDeg": 1.0607367596394615
+        },
+        {
+          "fromYear": 1990,
+          "toYear": 2020,
+          "maxDeg": 1.024223567716928
+        },
+        {
+          "fromYear": 2020,
+          "toYear": 2050,
+          "maxDeg": 0.9830652846179612
+        },
+        {
+          "fromYear": 2050,
+          "toYear": 2080,
+          "maxDeg": 0.9432106073599106
+        },
+        {
+          "fromYear": 2080,
+          "toYear": 2100,
+          "maxDeg": 0.9174890495444913
+        }
+      ]
+    }
+  ],
+  "frameConstants": {
+    "jupiter": {
+      "fitted": -20.449999999999914,
+      "used": -20.445
+    },
+    "saturn": {
+      "fitted": 39.88999999999982,
+      "used": 39.925
+    },
+    "uranus": {
+      "fitted": 4.6799999999999855,
+      "used": 4.68
+    }
+  }
+}

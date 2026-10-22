@@ -1,0 +1,634 @@
+{
+  "generated": "2026-10-22T02:00:05.719Z",
+  "reference": "JPL Horizons DE441, heliocentric ecliptic J2000, 1000 epochs per range; wide range uses system barycentres for Mars…Neptune",
+  "model": "VSOP87 (truncated, from Celestia 1.7.0)",
+  "ranges": {
+    "modern": {
+      "start": "1800-01-03",
+      "stop": "2199-12-29",
+      "planets": [
+        {
+          "planet": "mercury",
+          "angleArcsec": {
+            "max": 1.1893861065276174,
+            "rms": 0.3217408186674619,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": 1800,
+              "toYear": 1900,
+              "maxArcsec": 1.0470690022375477
+            },
+            {
+              "fromYear": 1900,
+              "toYear": 2000,
+              "maxArcsec": 1.1893861065276174
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 2100,
+              "maxArcsec": 1.1838889754719792
+            },
+            {
+              "fromYear": 2100,
+              "toYear": 2200,
+              "maxArcsec": 0.8544621931821271
+            }
+          ],
+          "radiusAu": {
+            "max": 7.054914214488228e-7
+          }
+        },
+        {
+          "planet": "venus",
+          "angleArcsec": {
+            "max": 1.0093533756054516,
+            "rms": 0.29304534301502133,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": 1800,
+              "toYear": 1900,
+              "maxArcsec": 0.8525695227055583
+            },
+            {
+              "fromYear": 1900,
+              "toYear": 2000,
+              "maxArcsec": 1.0093533756054516
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 2100,
+              "maxArcsec": 0.6597405905838578
+            },
+            {
+              "fromYear": 2100,
+              "toYear": 2200,
+              "maxArcsec": 0.6612423921870217
+            }
+          ],
+          "radiusAu": {
+            "max": 8.595194703753251e-7
+          }
+        },
+        {
+          "planet": "earth",
+          "angleArcsec": {
+            "max": 0.7466471518526857,
+            "rms": 0.27451934587724885,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": 1800,
+              "toYear": 1900,
+              "maxArcsec": 0.7466471518526857
+            },
+            {
+              "fromYear": 1900,
+              "toYear": 2000,
+              "maxArcsec": 0.5548821468293483
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 2100,
+              "maxArcsec": 0.5984815631793087
+            },
+            {
+              "fromYear": 2100,
+              "toYear": 2200,
+              "maxArcsec": 0.6562230210487056
+            }
+          ],
+          "radiusAu": {
+            "max": 6.857909297108833e-7
+          }
+        },
+        {
+          "planet": "mars",
+          "angleArcsec": {
+            "max": 0.9142249664780174,
+            "rms": 0.3205752894725255,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": 1800,
+              "toYear": 1900,
+              "maxArcsec": 0.88598190508033
+            },
+            {
+              "fromYear": 1900,
+              "toYear": 2000,
+              "maxArcsec": 0.9142249664780174
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 2100,
+              "maxArcsec": 0.9049868556029009
+            },
+            {
+              "fromYear": 2100,
+              "toYear": 2200,
+              "maxArcsec": 0.8060473331747571
+            }
+          ],
+          "radiusAu": {
+            "max": 7.025387331882627e-7
+          }
+        },
+        {
+          "planet": "jupiter",
+          "angleArcsec": {
+            "max": 0.9440260413717727,
+            "rms": 0.38538023901949825,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": 1800,
+              "toYear": 1900,
+              "maxArcsec": 0.6308266727246569
+            },
+            {
+              "fromYear": 1900,
+              "toYear": 2000,
+              "maxArcsec": 0.7366223649779232
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 2100,
+              "maxArcsec": 0.9440260413717727
+            },
+            {
+              "fromYear": 2100,
+              "toYear": 2200,
+              "maxArcsec": 0.8963914869466955
+            }
+          ],
+          "radiusAu": {
+            "max": 0.0000024253967776388663
+          }
+        },
+        {
+          "planet": "saturn",
+          "angleArcsec": {
+            "max": 1.1341737352383507,
+            "rms": 0.4249805905450944,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": 1800,
+              "toYear": 1900,
+              "maxArcsec": 0.8213606350842598
+            },
+            {
+              "fromYear": 1900,
+              "toYear": 2000,
+              "maxArcsec": 0.8735743192368685
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 2100,
+              "maxArcsec": 1.1341737352383507
+            },
+            {
+              "fromYear": 2100,
+              "toYear": 2200,
+              "maxArcsec": 0.9158922678338826
+            }
+          ],
+          "radiusAu": {
+            "max": 0.000005591139085936447
+          }
+        },
+        {
+          "planet": "uranus",
+          "angleArcsec": {
+            "max": 2.171211077563682,
+            "rms": 0.8155161242975363,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": 1800,
+              "toYear": 1900,
+              "maxArcsec": 1.7210183056333659
+            },
+            {
+              "fromYear": 1900,
+              "toYear": 2000,
+              "maxArcsec": 0.6041686482673441
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 2100,
+              "maxArcsec": 1.7320027177600044
+            },
+            {
+              "fromYear": 2100,
+              "toYear": 2200,
+              "maxArcsec": 2.171211077563682
+            }
+          ],
+          "radiusAu": {
+            "max": 0.0000990875552453474
+          }
+        },
+        {
+          "planet": "neptune",
+          "angleArcsec": {
+            "max": 4.411836766996066,
+            "rms": 1.9182227412057835,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": 1800,
+              "toYear": 1900,
+              "maxArcsec": 2.175968029020769
+            },
+            {
+              "fromYear": 1900,
+              "toYear": 2000,
+              "maxArcsec": 1.0403574889843712
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 2100,
+              "maxArcsec": 2.548376508116107
+            },
+            {
+              "fromYear": 2100,
+              "toYear": 2200,
+              "maxArcsec": 4.411836766996066
+            }
+          ],
+          "radiusAu": {
+            "max": 0.00006910674914806236
+          }
+        }
+      ]
+    },
+    "wide": {
+      "start": "BC 3001-01-01",
+      "stop": "3000-01-01",
+      "planets": [
+        {
+          "planet": "mercury",
+          "angleArcsec": {
+            "max": 14.966707189484074,
+            "rms": 3.8668548960055213,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": -3000,
+              "toYear": -2000,
+              "maxArcsec": 14.966707189484074
+            },
+            {
+              "fromYear": -2000,
+              "toYear": -1000,
+              "maxArcsec": 8.64787736843894
+            },
+            {
+              "fromYear": -1000,
+              "toYear": 0,
+              "maxArcsec": 4.384201730964327
+            },
+            {
+              "fromYear": 0,
+              "toYear": 1000,
+              "maxArcsec": 1.6001398254537424
+            },
+            {
+              "fromYear": 1000,
+              "toYear": 2000,
+              "maxArcsec": 1.0775228482037629
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 3000,
+              "maxArcsec": 1.6837805144338789
+            }
+          ],
+          "radiusAu": {
+            "max": 0.000007590974429816377
+          }
+        },
+        {
+          "planet": "venus",
+          "angleArcsec": {
+            "max": 11.242859301046003,
+            "rms": 3.588860955933927,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": -3000,
+              "toYear": -2000,
+              "maxArcsec": 11.242859301046003
+            },
+            {
+              "fromYear": -2000,
+              "toYear": -1000,
+              "maxArcsec": 6.177053546323123
+            },
+            {
+              "fromYear": -1000,
+              "toYear": 0,
+              "maxArcsec": 3.5950068572726606
+            },
+            {
+              "fromYear": 0,
+              "toYear": 1000,
+              "maxArcsec": 1.8741738205851002
+            },
+            {
+              "fromYear": 1000,
+              "toYear": 2000,
+              "maxArcsec": 0.9928726635224322
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 3000,
+              "maxArcsec": 0.6894428946343187
+            }
+          ],
+          "radiusAu": {
+            "max": 0.000003249092593415881
+          }
+        },
+        {
+          "planet": "earth",
+          "angleArcsec": {
+            "max": 17.870121824244695,
+            "rms": 8.353260766167379,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": -3000,
+              "toYear": -2000,
+              "maxArcsec": 17.870121824244695
+            },
+            {
+              "fromYear": -2000,
+              "toYear": -1000,
+              "maxArcsec": 14.064410186633461
+            },
+            {
+              "fromYear": -1000,
+              "toYear": 0,
+              "maxArcsec": 7.999234257761017
+            },
+            {
+              "fromYear": 0,
+              "toYear": 1000,
+              "maxArcsec": 2.925069780009633
+            },
+            {
+              "fromYear": 1000,
+              "toYear": 2000,
+              "maxArcsec": 1.0417866799051472
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 3000,
+              "maxArcsec": 0.8889039870794199
+            }
+          ],
+          "radiusAu": {
+            "max": 0.000002619346622489971
+          }
+        },
+        {
+          "planet": "mars",
+          "angleArcsec": {
+            "max": 10.103424119829274,
+            "rms": 3.741476612022054,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": -3000,
+              "toYear": -2000,
+              "maxArcsec": 10.103424119829274
+            },
+            {
+              "fromYear": -2000,
+              "toYear": -1000,
+              "maxArcsec": 8.256487234183108
+            },
+            {
+              "fromYear": -1000,
+              "toYear": 0,
+              "maxArcsec": 4.765814514383153
+            },
+            {
+              "fromYear": 0,
+              "toYear": 1000,
+              "maxArcsec": 3.683513214674103
+            },
+            {
+              "fromYear": 1000,
+              "toYear": 2000,
+              "maxArcsec": 1.4082555270863715
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 3000,
+              "maxArcsec": 4.235457180955542
+            }
+          ],
+          "radiusAu": {
+            "max": 0.000014417290323143206
+          }
+        },
+        {
+          "planet": "jupiter",
+          "angleArcsec": {
+            "max": 148.408219121812,
+            "rms": 31.4245524224463,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": -3000,
+              "toYear": -2000,
+              "maxArcsec": 148.408219121812
+            },
+            {
+              "fromYear": -2000,
+              "toYear": -1000,
+              "maxArcsec": 48.40257657049991
+            },
+            {
+              "fromYear": -1000,
+              "toYear": 0,
+              "maxArcsec": 10.480525979242582
+            },
+            {
+              "fromYear": 0,
+              "toYear": 1000,
+              "maxArcsec": 2.7620074620068156
+            },
+            {
+              "fromYear": 1000,
+              "toYear": 2000,
+              "maxArcsec": 1.1930460270522047
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 3000,
+              "maxArcsec": 1.2439099374726819
+            }
+          ],
+          "radiusAu": {
+            "max": 0.0003242697345129386
+          }
+        },
+        {
+          "planet": "saturn",
+          "angleArcsec": {
+            "max": 307.850953127877,
+            "rms": 55.68622871536267,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": -3000,
+              "toYear": -2000,
+              "maxArcsec": 307.850953127877
+            },
+            {
+              "fromYear": -2000,
+              "toYear": -1000,
+              "maxArcsec": 98.47890448198252
+            },
+            {
+              "fromYear": -1000,
+              "toYear": 0,
+              "maxArcsec": 29.789777237611524
+            },
+            {
+              "fromYear": 0,
+              "toYear": 1000,
+              "maxArcsec": 5.163292774654707
+            },
+            {
+              "fromYear": 1000,
+              "toYear": 2000,
+              "maxArcsec": 2.7990338349217527
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 3000,
+              "maxArcsec": 2.792554645773039
+            }
+          ],
+          "radiusAu": {
+            "max": 0.0023167185347752195
+          }
+        },
+        {
+          "planet": "uranus",
+          "angleArcsec": {
+            "max": 60.779989269676506,
+            "rms": 31.24051509729053,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": -3000,
+              "toYear": -2000,
+              "maxArcsec": 60.779989269676506
+            },
+            {
+              "fromYear": -2000,
+              "toYear": -1000,
+              "maxArcsec": 49.55477791868758
+            },
+            {
+              "fromYear": -1000,
+              "toYear": 0,
+              "maxArcsec": 51.46147281162371
+            },
+            {
+              "fromYear": 0,
+              "toYear": 1000,
+              "maxArcsec": 45.201360172777754
+            },
+            {
+              "fromYear": 1000,
+              "toYear": 2000,
+              "maxArcsec": 17.900165552755272
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 3000,
+              "maxArcsec": 16.89407074263649
+            }
+          ],
+          "radiusAu": {
+            "max": 0.00029811450019323615
+          }
+        },
+        {
+          "planet": "neptune",
+          "angleArcsec": {
+            "max": 88.37435003787446,
+            "rms": 45.21142033310525,
+            "n": 1001
+          },
+          "byInterval": [
+            {
+              "fromYear": -3000,
+              "toYear": -2000,
+              "maxArcsec": 88.37435003787446
+            },
+            {
+              "fromYear": -2000,
+              "toYear": -1000,
+              "maxArcsec": 65.79985846316907
+            },
+            {
+              "fromYear": -1000,
+              "toYear": 0,
+              "maxArcsec": 52.46385171274741
+            },
+            {
+              "fromYear": 0,
+              "toYear": 1000,
+              "maxArcsec": 36.433853163502995
+            },
+            {
+              "fromYear": 1000,
+              "toYear": 2000,
+              "maxArcsec": 16.118983144453477
+            },
+            {
+              "fromYear": 2000,
+              "toYear": 3000,
+              "maxArcsec": 11.836116131700813
+            }
+          ],
+          "radiusAu": {
+            "max": 0.00021881018279401587
+          }
+        }
+      ]
+    }
+  },
+  "earthMoon": {
+    "geocentreMaxArcsec": 0.6649181263874825,
+    "geocentreRmsArcsec": 0.270865444521648,
+    "barycentreMaxArcsec": 0.7110020245788997,
+    "barycentreRmsArcsec": 0.2650988507193818,
+    "geocentreAsBarycentreMaxArcsec": 6.942630113293953
+  }
+}
