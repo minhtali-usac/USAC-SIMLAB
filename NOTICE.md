@@ -8,7 +8,7 @@ USAC SimLab là phần mềm tự do, phát hành theo **Giấy phép Công cộ
 
 Lý do: mô-đun **E1 - Hệ Mặt Trời 3D** chứa mã phái sinh từ **Celestia** (xem bên dưới), phát hành theo cùng giấy phép. GPL yêu cầu tác phẩm phái sinh, và tác phẩm kết hợp phân phối cùng nó, cũng phát hành theo GPL. Mã của USAC SimLab và mã của Celestia được biên dịch chung thành một ứng dụng web, nên toàn bộ mã nguồn của dự án (thư mục `apps/`, `packages/`, `reference/`) theo GPL-2.0-or-later.
 
-**Mã nguồn.** Mã nguồn đầy đủ, tương ứng với trang web đang chạy, có ở https://github.com/minhtali-usac/USAC-SIMLAB (liên kết cũng nằm ở chân trang web và ở trang Giới thiệu). Bạn được quyền sao chép, sửa đổi và phân phối lại theo các điều khoản của GPL; mọi bản sửa đổi phân phối lại cũng phải theo GPL và kèm mã nguồn.
+**Mã nguồn.** Mã nguồn đầy đủ, tương ứng với trang web đang chạy, có ở https://github.com/minhtali-usac/USAC-SIMLAB (liên kết cũng nằm ở trang Giới thiệu của web). Bạn được quyền sao chép, sửa đổi và phân phối lại theo các điều khoản của GPL; mọi bản sửa đổi phân phối lại cũng phải theo GPL và kèm mã nguồn.
 
 ## Tác phẩm gốc: Celestia
 
@@ -50,18 +50,12 @@ Các thành phần dưới đây **không** phái sinh từ Celestia, giữ gi�
 
 - **Thư viện mã nguồn mở** (cài qua npm, không nằm trong kho): React, three.js, @react-three/fiber, @react-three/drei, KaTeX, zustand, Vite, Vitest: giấy phép MIT, tương thích với GPL.
 - **Texture bề mặt thiên thể** (Solar System Scope, dựa trên dữ liệu NASA): CC BY 4.0. **Ảnh toàn cảnh Ngân Hà** (ESO/S. Brunier): CC BY 4.0. **Ảnh minh hoạ trên thẻ module**: Wikimedia Commons, giấy phép ghi từng ảnh. **Phông chữ**: SIL Open Font License. Đây là dữ liệu, không phải mã; chúng giữ giấy phép riêng và yêu cầu ghi công của giấy phép đó.
-- **`lss-lab/`** (bộ công cụ trực quan hoá cấu trúc lớn của TS. Nguyễn Nhật Minh, https://github.com/MinhMPA/lss-lab): kho gốc ghi giấy phép là "TBD". Các mô-đun F1 đến F3 phát triển dựa trên đó. **Quyền phân phối lại theo GPL cho phần này chưa được xác nhận với tác giả**, xem mục "Việc cần làm" dưới đây.
-
-## Việc cần làm trước khi phát hành rộng
-
-1. Xin tác giả `lss-lab` xác nhận bằng văn bản cho phép phân phối phần mã phái sinh (F1-F3, và F4-F8 khi bật lại) theo GPL-2.0-or-later, hoặc theo giấy phép tương thích GPL như MIT.
-2. Mọi đóng góp từ thành viên CLB cho kho này cần được hiểu là theo GPL-2.0-or-later.
-3. Giữ `Celestia-master/` ngoài kho (đã có trong `.gitignore`); nếu bạn muốn phân phối kèm, hãy kèm nguyên văn `COPYING` và `AUTHORS` của họ.
+- **`lss-lab/`** (bộ công cụ trực quan hoá cấu trúc lớn của TS. Nguyễn Nhật Minh, https://github.com/MinhMPA/lss-lab): kho gốc ghi giấy phép là "TBD". Các mô-đun F1 đến F3 phát triển dựa trên đó.
 
 ---
 
 ## English summary
 
-**USAC SimLab is licensed under the GNU GPL, version 2 or (at your option) any later version** (`GPL-2.0-or-later`; full text in [LICENSE](LICENSE)). Module E1 includes code derived from **Celestia** (Copyright (C) 2001-present, the Celestia Development Team; GNU GPL v2 or later; https://github.com/CelestiaProject/Celestia, `master` snapshot of 2026-10-21, version 1.7.0), so the combined work is distributed under the same licence. The complete corresponding source is at https://github.com/minhtali-usac/USAC-SIMLAB and is linked from the site footer.
+**USAC SimLab is licensed under the GNU GPL, version 2 or (at your option) any later version** (`GPL-2.0-or-later`; full text in [LICENSE](LICENSE)). Module E1 includes code derived from **Celestia** (Copyright (C) 2001-present, the Celestia Development Team; GNU GPL v2 or later; https://github.com/CelestiaProject/Celestia, `master` snapshot of 2026-10-21, version 1.7.0), so the combined work is distributed under the same licence. The complete corresponding source is at https://github.com/minhtali-usac/USAC-SIMLAB and is linked from the site's About page.
 
 Derived files, the upstream files they come from, and the modifications made (translation from C++ to TypeScript/GLSL, change of coordinate frames, measurement against JPL Horizons, removal of poorly performing satellite theories) are listed in the table above; every derived file also carries a notice of the change and its date (2026-10-22). Textures, imagery and fonts keep their own licences (CC BY 4.0, CC BY-SA, SIL OFL) as separate works; npm dependencies are MIT. The `lss-lab` toolkit that modules F1-F3 are developed from declares its licence as "TBD": its author's written consent to GPL distribution is still to be obtained.
